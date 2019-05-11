@@ -43,5 +43,5 @@ Template:
 ```
 
 Result:
-{% include figure.html image="/images/2019-05-11-DetailView-Pagination/capture.jpg" %}
+{% include figure.html image="/assets/blog-images/2019-05-11-DetailView-Pagination/capture.jpg" %}
 
