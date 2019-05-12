@@ -4,7 +4,7 @@ categories:
 - Django
 - Web Development
 excerpt: |
-  A pot still is a type of still used in distilling spirits such as whisky or brandy. Heat is applied directly to the pot containing the wash (for whisky) or wine (for brandy).
+  How does pagination in DetailView look like? How to Implement it?
 feature_text: |
   ## The Pot Still
   The modern pot still is a descendant of the alembic, an earlier distillation device
