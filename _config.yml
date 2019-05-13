@@ -40,11 +40,14 @@ paginate: 2 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
 twitter:
-  username: DavidDarnes # jekyll-seo-tag > Owners twitter username
-author: DavidDarnes # jekyll-seo-tag > default author
+  username: ChoTaiHO1 # jekyll-seo-tag > Owners twitter username
+facebook:
+  username: joe.ho.716 # jekyll-seo-tag > Owners twitter username
+author: Joe HO # jekyll-seo-tag > default author
 social: # jekyll-seo-tag > social overrides
-  name: David Darnes # jekyll-seo-tag > real name
+  name: Joe HO # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
+    - https://twitter.com/ChoTaiHO1
     - https://www.facebook.com/joe.ho.716
     - https://www.linkedin.com/in/ho-cho-tai-0260758a/
     - https://github.com/JoeHo888
@@ -58,7 +61,7 @@ sass:
   style: compressed # Style compression
 permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
-timezone: Europe/London # Timezone for blog posts and alike
+timezone: Asia/Hong_Kong # Timezone for blog posts and alike
 
 # 5. Collections
 collections:
@@ -113,9 +116,10 @@ navigation_header:
   Search: /search/
 
 navigation_footer:
-  Joe Ho Blog
+  Joe Ho Blog: https://joeho888.github.io
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+  Twitter: https://twitter.com/ChoTaiHO1
   LinkedIn: https://www.linkedin.com/in/ho-cho-tai-0260758a/
   GitHub: https://github.com/JoeHo888
   link: https://JoeHo888.github.io
@@ -123,11 +127,12 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
 sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
   Twitter: "#0d94e7"
   facebook: "#3B5998"
+  LinkedIn: "#0077B5"
+  Email: ""
   # Google+: "#DC4E41"
   # Pinterest: "#BD081C"
-  LinkedIn: "#0077B5"
   # tumblr: "#36465D"
-  Reddit: "#FF4500"
+  # Reddit: "#FF4500"
   # Hacker News: "#ff6600"
   # Designer News: "#2D72D9"
-  Email: ""
+  

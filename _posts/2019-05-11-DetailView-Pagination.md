@@ -6,8 +6,8 @@ categories:
 excerpt: |
   How does pagination in DetailView look like? How to Implement it?
 feature_text: |
-  ## The Pot Still
-  The modern pot still is a descendant of the alembic, an earlier distillation device
+  ## Joe Ho Blog
+  How does pagination in DetailView look like? How to Implement it?
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
 ---

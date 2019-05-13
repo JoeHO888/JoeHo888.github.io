@@ -1,5 +1,7 @@
 ---
 title: Joe Ho Blog
+layout: page
+aside: true
 feature_text: |
   ## Joe Ho Blog
   A Blog about Software Development and other Technology
