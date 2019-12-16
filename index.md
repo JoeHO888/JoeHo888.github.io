@@ -4,19 +4,21 @@ layout: page
 aside: true
 feature_text: |
   ## Joe Ho Blog
-  A Blog about Software Development and other Technology
+  A Blog about Information Technology and Computer Science
 feature_image: "https://picsum.photos/1300/400?image=989"
-excerpt: "I will share stuff I learnt, mainly on software development. Hope you Enjoy!"
+excerpt: "Information Technology and Computer Science Blog"
 ---
 
 Hello,
 I'm Joe, I'm working in a Multinational Company as a IT professional. My fulltime job covers lots of areas as below,
 
-* SharePoint Online (Administration, Architecture Design, New Feature Testing, Support)
-* Development on Internal Tools (e.g. Internal Learning Portal, Recuitment Portal) with Office 365 products (SharePoint Online, Microsoft Flow, PowerApps,etc)
-* [OCS-NG](https://www.ocsinventory-ng.org/en/ "A link") Architecture Design and Support
-* [Windows DHCP Server](https://docs.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top "A link") Suport and Upgrade
-* [Splunk](https://www.splunk.com "A link") Dashboard and Application Support
+* End User Software Development on Azure Software as a service (Saas), e.g. [SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/introduction, "SharePoint Online"), [Power Apps](https://powerapps.microsoft.com/en-us/ "Power Apps"), [Power Automate](https://flow.microsoft.com/en-us/ "Power Automate")
+* Inhouse Blockchain Development ([Hyperledger Fabric](https://github.com/hyperledger/fabric "Hyperledger Fabric"), Etherum Token("https://blog.coinbase.com/a-beginners-guide-to-ethereum-tokens-fbd5611fe30b?gi=1b780569d506" "Etherum Token Introduction")) on Oracle, Microsoft and Huawei Blockchain as a service (Baas)
+* Traditional IT Infrastructure ([DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol "Dynamic Host Configuration Protocol") Server Administration and Upgrade, [OCS-NG](https://ocsinventory-ng.org/ "OCS-NG") Inventory Solution)
+* [Splunk] (https://www.splunk.com "Splunk") Analytics
 
-In my leisure time, I learn software development, algorithms, system design, data science and networking. I will try my best to record the stuff I learnt and hope you enjoy! Besides, I'm a Competition Master in Kaggle [https://www.kaggle.com/joe1995](https://www.kaggle.com/joe1995 "A link") 
+
+I'm a Competition Master in Kaggle [https://www.kaggle.com/joe1995](https://www.kaggle.com/joe1995 "Kaggle Profile") and hold [Microsoft Certified Azure Fundamentals Certificate](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals "Microsoft Certified Azure Fundamentals Certificate")
+
+In my leisure time, I learn cloud computing, devops, algorithms, system design, data science. 
 
