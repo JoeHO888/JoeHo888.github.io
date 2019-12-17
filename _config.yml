@@ -86,7 +86,7 @@ encoding: utf-8 # Make sure the encoding is right
 lang: en-US # Set the site language
 title: "Joe Ho Blog" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
-description: "A Blog about Software Development and other Technology"
+description: "A Blog about Information Technology and Computer Science"
 url: "https://JoeHo888.github.io" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/JoeHo888/JoeHo888.github.io"
@@ -112,6 +112,7 @@ navigation_header:
   Home: /
   # Elements: /elements/
   Blog: /blog/
+  Project: /projects/
   Categories: /categories/
   Search: /search/
 
@@ -123,6 +124,7 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
   LinkedIn: https://www.linkedin.com/in/ho-cho-tai-0260758a/
   GitHub: https://github.com/JoeHo888
   link: https://JoeHo888.github.io
+  Medium: https://JoeHo888.github.io
 
 sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
   Twitter: "#0d94e7"
