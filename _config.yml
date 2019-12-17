@@ -47,10 +47,10 @@ author: Joe HO # jekyll-seo-tag > default author
 social: # jekyll-seo-tag > social overrides
   name: Joe HO # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
-    - https://twitter.com/ChoTaiHO1
-    - https://www.facebook.com/joe.ho.716
     - https://www.linkedin.com/in/ho-cho-tai-0260758a/
     - https://github.com/JoeHo888
+    - https://medium.com/@joeho_15265
+    - https://JoeHo888.github.io
 # markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
 # commonmark:
   # options: ["SMART", "FOOTNOTES"]
@@ -120,11 +120,11 @@ navigation_footer:
   Joe Ho Blog: https://joeho888.github.io
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/ChoTaiHO1
   LinkedIn: https://www.linkedin.com/in/ho-cho-tai-0260758a/
   GitHub: https://github.com/JoeHo888
+  Medium: https://medium.com/@joeho_15265
   link: https://JoeHo888.github.io
-  Medium: https://JoeHo888.github.io
+  
 
 sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
   Twitter: "#0d94e7"
