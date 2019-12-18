@@ -42,11 +42,11 @@ On top of that, you need to know the difference of two similar products. For exa
 Overall, the time for completing the exam is also definitely enough, I completed the whole exam in about 30 minutes. 
 
 To prepare for this exam, there are several great and free materials/resources you can utilize
-1. Microsoft Learn - Azure Fundamentals [https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/](https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/)
+1. Microsoft Learn - Azure Fundamentals ([https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/](https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/))
 2. Azure Sandbox (You can try some Azure Services without creating a subscription)
 3. Azure Subscription (i.e. Azure Free Account with valid credit card provided, Azure Student Account)
-4. Azure Exercises [https://www.examtopics.com/exams/microsoft/az-900/view/1](https://www.examtopics.com/exams/microsoft/az-900/view/1)
-5. A series of Youtube videos on questions types [https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH](https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH)
+4. Azure Exercises ([https://www.examtopics.com/exams/microsoft/az-900/view/1](https://www.examtopics.com/exams/microsoft/az-900/view/1))
+5. A series of Youtube videos on questions types ([https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH](https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH)
 6. Azure Practice Exam at linuxacademy (7 days free trial) (I didn't try this, but it's free, why not have a try?)
 
 ## Suggested Study Plan
