@@ -42,7 +42,7 @@ On top of that, you need to know the difference of two similar products. For exa
 
 Overall, the time for completing the exam is also definitely enough, I completed the whole exam in about 30 minutes. 
 
-To prepare for this exam, there are several great and free materials/resources you can utilize
+Before the exam, I used some of the below materials and resources for preparation.
 1. Microsoft Learn - Azure Fundamentals ([https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/](https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/))
 2. Azure Sandbox (You can try some Azure Services without creating a subscription)
 3. Azure Subscription (i.e. Azure Free Account with valid credit card provided, Azure Student Account)
@@ -66,7 +66,7 @@ If you have an Azure subscription, I strongly recommend you to try a few of func
 
 If you don't want to provide your credit card to Microsoft and still want to try some features, I would recommend to try Azure Sandbox. Azure Sandbox acts like normal Azure Subscription with limited features, but you can access the Azure Portal and try a few services, e.g. creating management group, policies.
 
-## 3. Azure Exercises (5 hours)
+### 3. Azure Exercises (5 hours)
 After studying, I encourage you to do a few exercises to examine your knowledge. You may watch this Youtube playlist and know what kind of questions Azure Exam will ask. 
 
 Then, you may visit this set of free exercises which has 147 questions in total. I have found several websites sharing the same exercises as this website, but this website is better, as people will discuss some questions in the comment section of each question, so you will know why you answer each question wrong. 
