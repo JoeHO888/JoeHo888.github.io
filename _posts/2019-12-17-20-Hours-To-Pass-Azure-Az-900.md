@@ -60,18 +60,18 @@ This series has 12 modules in total and most of the modules can be completed wit
 There are two additional benefits these modules can bring. First, each module contains a short quiz, so you can test your knowledge on that module and study from mistakes. Second, some module will let you create a Azure Sandbox, you can get some hands-on experience on that Sandbox without inputting credit card information, e.g. [this azure exercise](https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/4-exercise-create-website)
 
 ### 2. Azure Sandbox/Azure Trial (5 hours)
-Although Azure Fundamentals explains the concepts well, it is still hard to imagine sometimes, so having hands on experience definitely help.
+Although Azure Fundamentals explains the concepts well, it is still hard to imagine the actual steps and process sometimes, so having hands on experience definitely help.
 
-If you have an Azure subscription, I strongly recommend you to try a few of functionalities, e.g. resources group, virtual machines. If you have no idea on what should you try, you may also follow the instructions in some of the Azure Fundamentals Modules, e.g. editing dashboards.
+If you have an Azure subscription, I strongly recommend you to try a few of functionalities, e.g. resources group, virtual machines. If you have no idea on what should you try, you may also follow the instructions in some of the Azure Fundamentals Modules, e.g. [editing dashboards](https://docs.microsoft.com/en-us/learn/modules/tour-azure-portal/4-exercise-work-with-blades).
 
-If you don't want to provide your credit card to Microsoft and still want to try some features, I would recommend to try Azure Sandbox. Azure Sandbox acts like normal Azure Subscription with limited features, but you can access the Azure Portal and try a few services, e.g. creating management group, policies.
+If you don't want to provide your credit card to Microsoft and still want to try some features, I recommend you to try Azure Sandbox. Azure Sandbox acts like normal Azure Subscription with limited features, but you can access the Azure Portal and try a few services, e.g. creating management group, policies.
 
 ### 3. Azure Exercises (5 hours)
-After studying, I encourage you to do a few exercises to examine your knowledge. You may watch this Youtube playlist and know what kind of questions Azure Exam will ask. 
+After studying, I encourage you to do some exercises to examine your knowledge. You may watch this [Youtube playlist](https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH) and know what kind of questions Azure Exam will ask. 
 
-Then, you may visit this set of free exercises which has 147 questions in total. I have found several websites sharing the same exercises as this website, but this website is better, as people will discuss some questions in the comment section of each question, so you will know why you answer each question wrong. 
+Then, you may visit [this set of free exercises](https://www.examtopics.com/exams/microsoft/az-900/view/1) which has 147 questions in total. I have found several websites sharing the same exercises as this website, but this website is better, as people will discuss some questions in the comment section of each question, so you will know why your answer is wrong. 
 
-However, I don't agree with the answer of each question, as I think the answers are wrong sometimes. If you don't agree with the answer of that question, you may refer to comment section to see if someone else share the same idea as you.
+However, I don't agree with the answer of each question, as I think the answers are wrong sometimes. If you don't agree with the answer of that question, you may refer to the comment section to see if someone else share the same idea as you.
 
 ## Kind Advice
 1. Have a good rest before the exam
@@ -80,7 +80,8 @@ However, I don't agree with the answer of each question, as I think the answers 
 4. Arrive test center 15 minutes before the exam
 
 ## Post-Exam
-After you complete the exam, you will know the result immediately. It describes how good you perform in those areas which the exam examines, you can further learn from areas you are rather weak at.
+After you complete the exam, you will know the result immediately. It describes how good you perform in areas which the exam examines, you can further learn from areas you are rather weak at.
+
 If you pass the AZ-900 Exam, you can view your certification on dashboard and share the link which someone else can view your certification.
 1. Browse to the dashboard
 2. Choose the badge you want to share
