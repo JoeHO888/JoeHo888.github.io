@@ -83,6 +83,6 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
 6. Click "Public badge view"
 6. You can put the link of that badge in LinkedIn or share with someone else. (Remark: Everyone with the link can see your badge and score)
 
-If you find this article helps, please clap for this post.
-This article is also published in my blog, [https://joeho888.github.io/](https://joeho888.github.io/)
+If you find this article helps, please clap for this post.<br>
+This article is also published in my blog, [https://joeho888.github.io/](https://joeho888.github.io/)<br>
 LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
