@@ -29,9 +29,9 @@ For each major area, the exam will cover different skills. Also, the Skills meas
 
 
 ## Personal Background
-I didn't have solid experience in Azure Administration/Development experience, but I worked on Some Saas Administration (e.g. SharePoint, Power App and Power Automate) before. Hence, I have some fundamental knowledge on computing service.
+I didn't have solid experience in Azure Administration/Development experience, but I worked on Some Saas Administration (e.g. SharePoint, Power App and Power Automate) before. Hence, I have some fundamental knowledge on computing service. If you want to know more, you may visit my LinkedIn and Blog, links are at the bottom of this article.
+
 Therefore, you may skip some of the materials below if you have already know the basics of Azure. You may also test your familiarity with exercises below, then you focus on areas you are less familiar with.
-If you want to know more, you may visit my LinkedIn and Blog, links are at the bottom of this article.
 
 ## My exam experience on AZ-900
 AZ-900 is slightly more difficult than I expected. 
@@ -90,6 +90,8 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
 6. Click "Public badge view"
 6. You can put the link of that badge in LinkedIn or share with someone else. (Remark: Everyone with the link can see your badge and score)
 
-If you find this article helps, please clap for this post.<br>
-This article is also published in my blog, [https://joeho888.github.io/](https://joeho888.github.io/)<br>
+If you find this article helps, please clap for this post.
+
+This article is also published in my blog, [https://joeho888.github.io/](https://joeho888.github.io/)
+
 LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
