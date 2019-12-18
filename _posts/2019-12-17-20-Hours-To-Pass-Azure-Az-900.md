@@ -83,7 +83,7 @@ However, I don't agree with the answer of each question, as I think the answers 
 After you complete the exam, you will know the result immediately. It describes how good you perform in areas which the exam examines, you can further learn from areas you are rather weak at.
 
 If you pass the AZ-900 Exam, you can view your certification on dashboard and share the link which someone else can view your certification.
-1. Browse to the dashboard
+1. Browse to the dashboard and login, https://www.microsoft.com/en-us/learning/dashboard.aspx
 2. Choose the badge you want to share
 3. Click "Share"
 4. You need to sign up in Acclaim 
