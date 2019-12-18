@@ -19,13 +19,13 @@ One of the certifications is Microsoft Certified Azure Fundamentals, you can be 
 ## Exam AZ-900 Detail
 It is [60 minutes long](https://techcommunity.microsoft.com/t5/ITOps-Talk-Blog/Exam-review-AZ-900-Microsoft-Azure-Fundamentals/ba-p/565041 "Detail"). 
 
-It focuses on four areas
+It focuses on four major areas
 * cloud concepts (15-20%)
 * core Azure services (30-35%)
 * security, privacy, compliance, and trust (25-30%)
 * Azure pricing and support (20-25%).
 
-One thing worths noticed is that the Skills measured is updated constantly, so the coverage of the exam might be slightly different. You may visit [here](https://docs.microsoft.com/en-us/learn/certifications/exams/az-900#certification-exams "AZ-900 Detail") for more information.
+For each major area, the exam will cover different skills. Also, the Skills measured is updated constantly, so the coverage of the exam might be slightly different. You may visit [here](https://docs.microsoft.com/en-us/learn/certifications/exams/az-900#certification-exams "AZ-900 Detail") for more information.
 
 
 ## Personal Background
