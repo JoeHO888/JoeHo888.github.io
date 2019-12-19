@@ -86,20 +86,62 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
 
 <ol>
   <li>
-    <div style="float: left;">
-        <p>Test</p>
+    <div>
+        <p>Browse to the <a href="https://www.microsoft.com/en-us/learning/dashboard.aspx">dashboard</a> and login</p>
     </div>
-    <div style="float: left;">
-        <img src="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard">
+    <div>
+        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard">
     </div>	
-    <div style="float: none; clear: both;"></div>	
   </li>
-  <li>Tea</li>
-  <li>Milk</li>
+  <li>
+    <div>
+        <p>Choose the badge you want to share</p>
+    </div>
+    <div>
+        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step2.jpg" alt="Certification Badge">
+    </div>	
+  </li>
+  <li>
+    <div>
+        <p>Click "Share"</p>
+    </div>
+    <div>
+        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step3.jpg" alt="Certification Badge">
+    </div>	
+  </li>  
+  <li>
+    <div>
+        <p>You need to sign up in Acclaim </p>
+    </div>
+  </li>    
+  <li>
+    <div>
+        <p>Choose the badge in Accliam Dashboard</p>
+    </div>
+    <div>
+        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step5.jpg" alt="Certification Badge">
+    </div>	
+  </li>  
+  <li>
+    <div>
+        <p>Click "Public badge view"</p>
+    </div>
+    <div>
+        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step6.jpg" alt="Certification Badge">
+    </div>	
+  </li>    
+  <li>
+    <div>
+        <p>You can put the link of that badge in LinkedIn or share with someone else.</p>
+    </div>
+    <div>
+        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step7.jpg" alt="Certification Badge">
+    </div>	
+  </li>      
 </ol>
 
 
-1. Browse to the [dashboard](https://www.microsoft.com/en-us/learning/dashboard.aspx) and login {% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard" %}
+1. Browse to the [dashboard]() and login {% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard" %}
 2. Choose the badge you want to share {% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step2.jpg" alt="Certification Badge" %}
 3. Click "Share" {% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step3.jpg" alt="Certification Badge" %}
 4. You need to sign up in Acclaim 
