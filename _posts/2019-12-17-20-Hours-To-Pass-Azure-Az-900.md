@@ -12,9 +12,9 @@ image: "https://picsum.photos/2560/600?image=733"
 ---
 
 ## Background
-Microsoft's Azure is one of the major cloud computing service, it is the second largest Public Cloud Service with about [19% of market share](https://www.statista.com/chart/18819/worldwide-market-share-of-leading-cloud-infrastructure-service-providers/ "Market Share").Considering the growth in public cloud service, learning Azure definitely brings you more career opportunities and growth, you may earn [15% higher salary](https://www.microsoft.com/en-us/learning/certification-benefits.aspx "Salary") as reported by Microsoft if you are certificated. Microsoft offers lots of Azure related certifications for different kind of roles, e.g. Developers, IT Administrators and Data Scientists. 
+Microsoft's Azure is one of the major cloud computing service, it is the second largest Public Cloud Service with about [19% of market share](https://www.statista.com/chart/18819/worldwide-market-share-of-leading-cloud-infrastructure-service-providers/ "Market Share"). Considering the growth in public cloud service, learning Azure definitely brings you more career opportunities and growth, you may earn [15% higher salary](https://www.microsoft.com/en-us/learning/certification-benefits.aspx "Salary") as reported by Microsoft if you are certificated. Microsoft offers lots of Azure related certifications for different kind of roles, e.g. Developers, IT Administrators and Data Scientists. 
 
-One of the certifications is Microsoft Certified Azure Fundamentals, you can be certificated once you pass the exam, AZ-900, which aims to examine your knowledge on cloud computing service and Azure fundamental. This certificate is optional if you would like pursue advance level of certificate, e.g. associate level and expert level. However, it will let you to gain more insights on Azure, especially if you are a beginner on Azure or Cloud Computing.
+One of the certifications is Microsoft Certified Azure Fundamentals, you can be certificated once you pass the exam, AZ-900, which aims to examine your knowledge on cloud computing service and Azure fundamental. This certificate is optional if you would like to pursue advance level of certificate, e.g. associate level and expert level. However, it will let you to gain more insights on Azure, especially if you are a beginner on Azure or Cloud Computing.
 
 ## Exam AZ-900 Detail
 It is [60 minutes long](https://techcommunity.microsoft.com/t5/ITOps-Talk-Blog/Exam-review-AZ-900-Microsoft-Azure-Fundamentals/ba-p/565041 "Detail"). 
@@ -60,14 +60,14 @@ This series has 12 modules in total and most of the modules can be completed wit
 There are two additional benefits these modules can bring. First, each module contains a short quiz, so you can test your knowledge on that module and study from mistakes. Second, some module will let you create a Azure Sandbox, you can get some hands-on experience on that Sandbox without inputting credit card information, e.g. [this azure exercise](https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/4-exercise-create-website)
 
 ### 2. Azure Sandbox/Azure Trial (5 hours)
-Although Azure Fundamentals explains the concepts well, it is still hard to imagine the actual steps and process sometimes, so having hands on experience definitely help.
+Although Azure Fundamentals explains the concepts well, it is still hard to imagine the actual steps and process sometimes, so having hands on experience definitely helps.
 
-If you have an Azure subscription, I strongly recommend you to try a few of functionalities, e.g. resources group, virtual machines. If you have no idea on what should you try, you may also follow the instructions in some of the Azure Fundamentals Modules, e.g. [editing dashboards](https://docs.microsoft.com/en-us/learn/modules/tour-azure-portal/4-exercise-work-with-blades).
+If you have an Azure subscription, I strongly recommend you to try a few of functionalities, e.g. resources group, virtual machines. If you have no idea on what you should try, you may also follow the instructions in some of the Azure Fundamentals Modules, e.g. [editing dashboards](https://docs.microsoft.com/en-us/learn/modules/tour-azure-portal/4-exercise-work-with-blades).
 
 If you don't want to provide your credit card to Microsoft and still want to try some features, I recommend you to try Azure Sandbox. Azure Sandbox acts like normal Azure Subscription with limited features, but you can access the Azure Portal and try a few services, e.g. creating management group, policies.
 
 ### 3. Azure Exercises (5 hours)
-After studying, I encourage you to do some exercises to examine your knowledge. You may watch this [Youtube playlist](https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH) and know what kind of questions Azure Exam will ask. 
+After studying, I encourage you to do some exercises to examine your knowledge. You may watch this [Youtube playlist](https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH) and know what kinds of questions Azure Exam will ask. 
 
 Then, you may visit [this set of free exercises](https://www.examtopics.com/exams/microsoft/az-900/view/1) which has 147 questions in total. I have found several websites sharing the same exercises as this website, but this website is better, as people will discuss some questions in the comment section of each question, so you will know why your answer is wrong. 
 
