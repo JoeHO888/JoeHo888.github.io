@@ -85,7 +85,15 @@ After you complete the exam, you will know the result immediately. It describes 
 If you pass the AZ-900 Exam, you can view your certification on dashboard and share the link which someone else can view your certification.
 
 <ol>
-  <li>Coffee</li>
+  <li>
+    <div style="float: left;">
+        <p>Test</p>
+    </div>
+    <div style="float: left;">
+        <img src="concept-truck.jpg" alt="2013 Toyota Tacoma" id="itemImg">
+    </div>	
+    <div style="float: none; clear: both;"></div>	
+  </li>
   <li>Tea</li>
   <li>Milk</li>
 </ol>
