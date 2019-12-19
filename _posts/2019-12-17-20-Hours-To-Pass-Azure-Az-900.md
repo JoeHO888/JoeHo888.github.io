@@ -90,7 +90,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
         <p>Test</p>
     </div>
     <div style="float: left;">
-        <img src="concept-truck.jpg" alt="2013 Toyota Tacoma" id="itemImg">
+        <img src="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard">
     </div>	
     <div style="float: none; clear: both;"></div>	
   </li>
