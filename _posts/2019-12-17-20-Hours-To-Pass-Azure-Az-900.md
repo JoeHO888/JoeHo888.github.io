@@ -142,6 +142,8 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
   </li>      
 </ol>
 
-This article is also published in my blog, [https://joeho888.github.io/](https://joeho888.github.io/)
+This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4](https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4)
+
+Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
 
 LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
