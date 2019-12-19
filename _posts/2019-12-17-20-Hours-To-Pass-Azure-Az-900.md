@@ -29,7 +29,9 @@ For each major area, the exam will cover different skills. Also, the skills meas
 
 
 ## Personal Background
-I didn't have solid experience in Azure Administration/Development experience, but I worked on Some Saas Administration (e.g. SharePoint, Power App and Power Automate) before. Hence, I have some fundamental knowledge on computing service. If you want to know more, you may visit my LinkedIn and Blog, links are at the bottom of this article.
+I have some experience in Azure Administration, for example App Management and Microsoft Graph API Management. Regarding development, I tried a few products, virtual machines, Azure Automation and Key Vault.
+
+Hence, I have some fundamental knowledge on Azure and cloud computing. If you want to know more, you may visit my LinkedIn and Blog, links are at the bottom of this article.
 
 Therefore, you may skip some of the materials below if you have already known the basics of Azure. You may also test your familiarity with exercises below, then you focus on areas you are less familiar with.
 
