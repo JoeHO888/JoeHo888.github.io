@@ -142,8 +142,6 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
   </li>      
 </ol>
 
-If you find this article helps, please clap for this post.
-
 This article is also published in my blog, [https://joeho888.github.io/](https://joeho888.github.io/)
 
 LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
