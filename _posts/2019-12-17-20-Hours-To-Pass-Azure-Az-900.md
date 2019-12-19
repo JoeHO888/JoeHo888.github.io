@@ -48,7 +48,7 @@ Before the exam, I used some of the below materials and resources for preparatio
 3. Azure Subscription (e.g. Azure Free Account with valid credit card provided, Azure Student Account)
 4. Azure Exercises ([https://www.examtopics.com/exams/microsoft/az-900/view/1](https://www.examtopics.com/exams/microsoft/az-900/view/1))
 5. A series of Youtube videos on questions types ([https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH](https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH))
-6. Azure Practice Exam at linuxacademy (7 days free trial) (I didn't try this, but it's free, why not have a try?)
+6. Azure Practice Exam at [Linux Academy](https://linuxacademy.com/course/microsoft-azure-fundamentals-az-900-exam-prep/) (7 days free trial) (I didn't try this, but it's free, why not have a try?)
 
 ## Suggested Study Plan
 
