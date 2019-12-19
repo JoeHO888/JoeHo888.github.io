@@ -87,7 +87,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
 <ol>
   <li>
     <div>
-        <p>Browse to the <a href="https://www.microsoft.com/en-us/learning/dashboard.aspx">dashboard</a> and login</p>
+        Browse to the <a href="https://www.microsoft.com/en-us/learning/dashboard.aspx">dashboard</a> and login
     </div>
     <div>
         <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard">
