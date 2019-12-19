@@ -14,7 +14,7 @@ image: "https://picsum.photos/2560/600?image=733"
 ## Background
 Microsoft's Azure is one of the major cloud computing service, it is the second largest Public Cloud Service with about [19% of market share](https://www.statista.com/chart/18819/worldwide-market-share-of-leading-cloud-infrastructure-service-providers/ "Market Share"). Considering the growth in public cloud service, learning Azure definitely brings you more career opportunities and growth, you may earn [15% higher salary](https://www.microsoft.com/en-us/learning/certification-benefits.aspx "Salary") as reported by Microsoft if you are certificated. Microsoft offers lots of Azure related certifications for different kind of roles, e.g. Developers, IT Administrators and Data Scientists. 
 
-One of the certifications is Microsoft Certified Azure Fundamentals, you can be certificated once you pass the exam, AZ-900, which aims to examine your knowledge on cloud computing service and Azure fundamental. This certificate is optional if you would like to pursue advance level of certificate, e.g. associate level and expert level. However, it will let you to gain more insights on Azure, especially if you are a beginner on Azure or Cloud Computing.
+One of the certifications is Microsoft Certified Azure Fundamentals, you can be certificated once you pass the exam, AZ-900, which aims to examine your knowledge on cloud computing service and Azure fundamental. This certificate is optional if you would like to pursue advance level of certificate, e.g. associate level and expert level. However, it will let you gain more insights on Azure, especially if you are a beginner on Azure or Cloud Computing.
 
 ## Exam AZ-900 Detail
 It is [60 minutes long](https://techcommunity.microsoft.com/t5/ITOps-Talk-Blog/Exam-review-AZ-900-Microsoft-Azure-Fundamentals/ba-p/565041 "Detail"). 
@@ -25,7 +25,7 @@ It focuses on four major areas
 * security, privacy, compliance, and trust (25-30%)
 * pricing and support (20-25%).
 
-For each major area, the exam will cover different skills. Also, the skills measured is updated constantly, so the coverage of the exam might be slightly different. You may visit [here](https://docs.microsoft.com/en-us/learn/certifications/exams/az-900#certification-exams "AZ-900 Detail") for more information.
+For each major area, the exam will cover different skills. Also, the skills measured are updated constantly, so the coverage of the exam might be slightly different. You may visit [here](https://docs.microsoft.com/en-us/learn/certifications/exams/az-900#certification-exams "AZ-900 Detail") for more information.
 
 
 ## Personal Background
@@ -71,7 +71,7 @@ After studying, I encourage you to do some exercises to examine your knowledge. 
 
 Then, you may visit [this set of free exercises](https://www.examtopics.com/exams/microsoft/az-900/view/1) which has 147 questions in total. I have found several websites sharing the same exercises as this website, but this website is better, as people will discuss some questions in the comment section of each question, so you will know why your answer is wrong. 
 
-However, I don't agree with the answer of each question, as I think the answers are wrong sometimes. If you don't agree with the answer of that question, you may refer to the comment section to see if someone else share the same idea as you.
+However, I don't agree with the answer of some questions, as I think those answers are wrong sometimes. If you don't agree with the answer of that question, you may refer to the comment section to see if someone else share the same idea as you.
 
 ## Kind Advice
 1. Have a good rest before the exam
