@@ -86,14 +86,14 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
 1. Browse to the dashboard and login, https://www.microsoft.com/en-us/learning/dashboard.aspx
 {% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard" %}
 2. Choose the badge you want to share
-{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step2.jpg" alt="Shareable Badge URL" %}
+{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step2.jpg" alt="Certification Badge" %}
 3. Click "Share"
-{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step3.jpg" alt="Shareable Badge URL" %}
+{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step3.jpg" alt="Certification Badge" %}
 4. You need to sign up in Acclaim 
 5. Choose the badge in Accliam Dashboard
-{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step5.jpg" alt="Shareable Badge URL" %}
+{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step5.jpg" alt="Accliam Dashboard" %}
 6. Click "Public badge view"
-{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step6.jpg" alt="Shareable Badge URL" %}
+{% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step6.jpg" alt="Edit Badge Setting" %}
 7. You can put the link of that badge in LinkedIn or share with someone else. (Remark: Everyone with the link can see your badge and score)
 {% include figure.html image="/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step7.jpg" alt="Shareable Badge URL" %}
 
