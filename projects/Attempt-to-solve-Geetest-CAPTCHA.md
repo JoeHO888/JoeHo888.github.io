@@ -24,7 +24,6 @@ Second, your bot need to behave like a human being while answering. When someone
 1. Answer the test correctly
 2. Make your bot behave like a human being 
 
-
 # Technology Stack
 1. Selenium (Atutomatically to click some buttons on the CAPTCHA)
 2. OpenCV (Image Processing, including recognize the icons)
