@@ -37,4 +37,5 @@ There are a few reasons that my bot cannot solve those CAPTCHAs.
 First, I use hard-coded threshold for all CAPTCHAs, which aims to remove background. However, it is fixed in all CAPTCHAs, so it cannot cater all CAPTCHAs, images after thresholding either remove part of the icons or leave too much background.
 Second, My bot assumes the icons are white, which are wrong sometimes. In some CAPTCHAs, some of the icons are black. What's more, the icons may share similar color as background (It makes a human being to solve as well...)
 
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
  
