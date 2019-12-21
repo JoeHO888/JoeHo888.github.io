@@ -6,7 +6,7 @@ feature_image: "https://picsum.photos/2560/600?image=873"
 excerpt: "A demo of Markdown and HTML includes"
 aside: true
 ---
-Project URL: [https://joeho888.github.io/projects/attempt-to-solve-geetest-captcha/](https://joeho888.github.io/projects/attempt-to-solve-geetest-captcha/)
+Project URL: [https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/](https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/)
 
 # Heading 1
 
