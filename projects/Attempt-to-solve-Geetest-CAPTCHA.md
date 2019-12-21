@@ -3,7 +3,7 @@ title: Attempt To Solve Geetest CAPTCHA
 feature_text: |
   Attempt To Solve Geetest CAPTCHA
 feature_image: "https://picsum.photos/2560/600?image=873"
-excerpt: "Attempt to solve Geetest CAPTCHA"
+excerpt: "Attempt To Solve Geetest CAPTCHA"
 aside: true
 ---
 
