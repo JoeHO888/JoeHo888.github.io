@@ -23,6 +23,16 @@ Remark: CAPTCHA is available at [https://www.geetest.com/en](https://www.geetest
 2. OpenCV (Image Processing, finding the targets on the main pane)
 3. Other Libraries (matplotlib, urllib, numpy, scipy, skimage, time, Pillow)
 
+## CAPTCHA Solving Steps
+We will take this CAPTCHA as an example.
+1. Download the CAPTCHA. Targets and the main pane are actually from two different pictures, but we don't need to download two pictures, as the targets can also be found in the bottom of the main pane, which is hidden when we open the CAPTCHA in browser. Hence, we just need to download the main pane.
+2. Extract each target from the CAPTCHA. We can see that all targets are located at the bottom of main pane with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
+a) Hard code the length of space. This method will fail, as it remove remove some part of some targets or add addtional detail to some targets. Hence, out bot need to be smart enough to recognize each target
+b) 
+3. Remove the background in the main pane. Convert the CAPTCHA into grey scale picture, then preserve bright pixels only (as these pixels probably construct the targets we are looging for)
+4. Locate the icon candidates.
+5. Calcuate the similarity score for "each pair" of candidate and target. As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
+
 # Result
 Geetest CAPTCHA is quite hard, my bot can only solve 25% of them.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
@@ -30,8 +40,14 @@ Geetest CAPTCHA is quite hard, my bot can only solve 25% of them.
 # Improvement Areas 
 There are a few reasons that my bot cannot solve those CAPTCHAs.
 
-First, I use hard-coded threshold for all CAPTCHAs, which aims to remove background. However, it is fixed in all CAPTCHAs, so it cannot cater all CAPTCHAs, images after thresholding either remove part of the icons or leave too much background.
-Second, My bot assumes the icons are white, which are wrong sometimes. In some CAPTCHAs, some of the icons are black. What's more, the icons may share similar color as background (It makes a human being to solve as well...)
+First, I use fixed and hard-coded threshold for background removal in all CAPTCHAs, so it cannot cater all CAPTCHAs, either some parts of the icons are removed or too much detail are left in the main pane. 
+One approach to solve that is through sampling, we can collect many CAPTCHAs, test different kind of thresholds (Percentage Threshold) which only keep the top several % of brightest pixels, then apply this new "Percentage Threshold" on new CAPTCHAs. 
+However, this approach has two drawbacks. 
+It will require many human efforts, as there is no metric to measure how good this Percentage Threshold is, so you need to determine the every possibility of Percentage Threshold by yourself. 
+Besides, this approach cannot tackle all CAPTCHAs, as the Percentage Threshold will no longer apply if a new CAPTCHA has a complete different distribution of pixel values.
 
+Second, My bot assumes the icons are white, which is wrong sometimes. In some CAPTCHAs, some of the icons are black. What's more, the icons may share similar color as background (It makes a human being to solve as well...)
 
+Source Code: URL
+This article is also published in Medium: 
  
