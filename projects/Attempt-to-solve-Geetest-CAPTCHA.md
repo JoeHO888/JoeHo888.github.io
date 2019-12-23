@@ -49,13 +49,13 @@ There are a few reasons that my bot cannot solve those CAPTCHAs.
 
 First, I use fixed and hard-coded threshold for background removal in all CAPTCHAs, so it cannot cater all CAPTCHAs, either some parts of the icons are removed or too much detail are left in the main pane. 
 One approach to solve that is through sampling, we can collect many CAPTCHAs, test different kind of thresholds (Percentage Threshold) which only keep the top several % of brightest pixels, then apply this new "Percentage Threshold" on new CAPTCHAs. 
-However, this approach has two drawbacks. 
-It will require many human efforts, as there is no metric to measure how good this Percentage Threshold is, so you need to determine the every possibility of Percentage Threshold by yourself. 
+
+However, this approach has two drawbacks. It will require many human efforts, as there is no metric to measure how good this Percentage Threshold is, so you need to determine the every possibility of Percentage Threshold by yourself. 
 Besides, this approach cannot tackle all CAPTCHAs, as the Percentage Threshold will no longer apply if a new CAPTCHA has a complete different distribution of pixel values.
 
-Second, My bot assumes the icons are white, which is wrong sometimes. In some CAPTCHAs, some of the icons are black. What's more, the icons may share similar color as background (It makes a human being to solve as well...)
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/black-icon.jpg" alt="Black Icon" %}
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/similar-color-icon.jpg" alt="Similar Color for Icon" %}
+Second, even though I can find a good threshold which is able separate an icon from the background, it is still insufficient, as the icons may have different color. In other words, we need several excellent thresholds for different icons to separate them from their neightbour background.
+I haven't found a good approach for that, feel free to comment if you have good idea!
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/different-colors-icons.jpg" alt="Different Colors Icons" caption="Different Colors Icons" %}
 
 Source Code: URL
 This article is also published in Medium: 
