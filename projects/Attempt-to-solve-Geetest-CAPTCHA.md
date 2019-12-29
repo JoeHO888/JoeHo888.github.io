@@ -25,11 +25,13 @@ Remark: CAPTCHA is available at [https://www.geetest.com/en](https://www.geetest
 
 ## CAPTCHA Solving Steps
 We will take this CAPTCHA as an example.
+
 1.Download the CAPTCHA. Targets and the main pane are actually from two different pictures, but we don't need to download two pictures, as the targets can also be found in the bottom of the main pane, which is hidden when we open the CAPTCHA in browser. Hence, we just need to download the main pane.
 
 2.Extract each target from the CAPTCHA. We can see that all targets are located at the bottom of main pane with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
 	a)Hard code the length of space. This method will fail, as it remove remove some part of some targets or add addtional detail to some targets. Hence, out bot need to be smart enough to recognize each target
 	b) 
+	
 3.Remove the background in the main pane. By doing so, we can reduce the computation and increase accuracy. First, in order to find the targets in main pane, we need to compute the similarity between an area and a target, we can only do this computation on certain areas if we remove unneccssary pixels (i.e. background). Second, the less areas we need to check, the higher accuracy we can obtain.
   
   To remove the background, there are 2 steps.
@@ -37,6 +39,7 @@ We will take this CAPTCHA as an example.
   Convert the CAPTCHA into grey scale picture. It can reduce the computation by a factor of 3, as the total number of pixels in a grey scale picture is one-third of that in original CAPTCHA consisting 3 channels (Red, Green and Blue). Besides, it makes background removal easier, we just need to decide a threshold for grey-scale picture instead of total 3 thresholds for Red, Green and Blue channels.
   
   Set a threshold to remove pixels which have value larger than that, as targets in main pane are constructed by white pixels.
+
 4.Locate the icon candidates. 
   
   Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
@@ -64,5 +67,6 @@ I haven't found a good approach for that, feel free to comment if you have good 
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/different-colors-icons.jpg" alt="Different Colors Icons" caption="Different Colors Icons" %}
 
 Source Code: URL
+
 This article is also published in Medium: 
  
