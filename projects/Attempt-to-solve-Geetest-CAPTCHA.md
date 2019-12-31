@@ -66,7 +66,7 @@ Second, even though I can find a good threshold which is able separate an icon f
 I haven't found a good approach for that, feel free to comment if you have good idea!
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/different-colors-icons.jpg" alt="Different Colors Icons" caption="Different Colors Icons" %}
 
-Source Code: URL
+Source Code: https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving
 
 This article is also published in Medium: 
  
