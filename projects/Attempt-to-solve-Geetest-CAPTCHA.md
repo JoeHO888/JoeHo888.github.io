@@ -23,12 +23,22 @@ Remark: CAPTCHA is available at [https://www.geetest.com/en](https://www.geetest
 2. OpenCV (Image Processing, finding the targets on the main pane)
 3. Other Libraries (matplotlib, urllib, numpy, scipy, skimage, time, Pillow)
 
+## Terminology
+To explain the solving steps below, a few terms will be used to describe different parts of the CAPTCHA.
+1. Main Pane - The area containing several icons and the background
+2. Targets - What we going to find in the main pane
+3. Target Pane - The area containing all targets
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/terminology-picture.jpg" alt="Picture for terminology explanation" caption="Green: Icons, Blue: Main Pane, Yellow: Target" %}
+
 ## CAPTCHA Solving Steps
+https://www.geetest.com/show
 We will take this CAPTCHA as an example.
 
-1.Download the CAPTCHA. Targets and the main pane are actually from two different pictures, but we don't need to download two pictures, as the targets can also be found in the bottom of the main pane, which is hidden when we open the CAPTCHA in browser. Hence, we just need to download the main pane.
+1.Download the CAPTCHA. The CAPTCHA actually comes from the picture below. You can find it by searching "geetest_item_img" class in browser debug console.
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/download-CAPTCHA.jpg" alt="Picture for terminology explanation" caption="Search 'geetest_item_img' to obtain the geetest CAPTCHA" %}
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-CAPTCHA.jpg" alt="Demo CAPTCHA" caption="Demo CAPTCHA" %}
 
-2.Extract each target from the CAPTCHA. We can see that all targets are located at the bottom of main pane with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
+2.Extract each target from the CAPTCHA. We can see that all targets are located at the bottom with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
 	a)Hard code the length of space. This method will fail, as it remove remove some part of some targets or add addtional detail to some targets. Hence, out bot need to be smart enough to recognize each target
 	b) 
 	
@@ -36,11 +46,21 @@ We will take this CAPTCHA as an example.
   
   To remove the background, there are 2 steps.
   
-  Convert the CAPTCHA into grey scale picture. It can reduce the computation by a factor of 3, as the total number of pixels in a grey scale picture is one-third of that in original CAPTCHA consisting 3 channels (Red, Green and Blue). Besides, it makes background removal easier, we just need to decide a threshold for grey-scale picture instead of total 3 thresholds for Red, Green and Blue channels.
-  
-  Set a threshold to remove pixels which have value larger than that, as targets in main pane are constructed by white pixels.
-
-4.Locate the icon candidates. 
+  Convert the CAPTCHA into grey scale picture. It can reduce the computation complexity by a factor of 3, as the total number of pixels in a grey scale picture is one-third of that in original CAPTCHA consisting 3 channels (Red, Green and Blue). Besides, it makes background removal easier, we just need to decide a threshold for grey-scale picture instead of total 3 thresholds for Red, Green and Blue channels.
+  ``` python
+  img_grey = cv2.imread(image_path,0) # image_path is the path where the CAPTCHA stored
+  ```
+  Set a threshold to remove pixels in main_pane which have value larger than that, as targets in main pane are constructed by white pixels.
+  ``` python
+  # crop image
+  main_pane = img_grey[:350,:] # Extract the main_pane from the CAPTCHA
+  color_threshold = 180
+  main_pane = cv2.blur(main_pane,(3,3)) # Adequate blurring can reduce image noise
+  main_pane[main_pane<color_threshold] = 0
+  main_pane[main_pane>=color_threshold] = 255	
+  ```
+  Remark: blurring can reduce image noise
+4.Locate where the icons are in the main pane
   
   Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
 
