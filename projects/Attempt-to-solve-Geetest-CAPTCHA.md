@@ -59,10 +59,18 @@ We will take this CAPTCHA as an example.
   main_pane[main_pane<color_threshold] = 0
   main_pane[main_pane>=color_threshold] = 255	
   ```
-  Remark: blurring can reduce image noise
+Remark: 
+Blurring make each pixel being affected by its  surrounding pixels. In this case, some noise (or some pixel has extraordinary higher/lower value) will be "compensated" by the values nearby, thus can be removed.
+
+In terms of mathematics, blurring is to convolve a kernel with an image, which is the same technique used in Convolutional neural network (a kind of state of art in Deep Lerning/Artificial Intelligence). You may refer to below materials for more information.
+
+References:
+[https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
+[https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
+
 4.Locate where the icons are in the main pane
   
-  Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
+ Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
 
 5.Calcuate the similarity score for "each pair" of candidate and target. As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
 
@@ -86,7 +94,7 @@ Second, even though I can find a good threshold which is able separate an icon f
 I haven't found a good approach for that, feel free to comment if you have good idea!
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/different-colors-icons.jpg" alt="Different Colors Icons" caption="Different Colors Icons" %}
 
-Source Code: https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving
+Source Code: [https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving](https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving)
 
 This article is also published in Medium: 
  
