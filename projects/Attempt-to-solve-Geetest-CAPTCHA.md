@@ -65,14 +65,19 @@ Blurring make each pixel being affected by its  surrounding pixels. In this case
 In terms of mathematics, blurring is to convolve a kernel with an image, which is the same technique used in Convolutional neural network (a kind of state of art in Deep Lerning/Artificial Intelligence). You may refer to below materials for more information.
 
 References:
-[https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
-[https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
+1. [https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
+2. [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
 
-4.Locate where the icons are in the main pane
+4.Locate where the icons are in the main pane. The basic idea is to extract the external boundary of each icon, then we can get some "critical" points of that boundary (i.e. the points can form the boundary via joining them with various straight lines.). After that, we can draw the bounding box (a.k.a rectangle) from these points by comparing these points' x and y coordinates, e.g. top left corner of the boundary box is the top left point
+
+Remark:
+The boundary we are looking for is  external boundary, so that we can obtain the largest boundary box for the icon and avoid too many computation if we obtain all boundaries. A counter example is as below: https://docs.opencv.org/3.4/d9/d8b/tutorial_py_contours_hierarchy.html
   
  Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
 
-5.Calcuate the similarity score for "each pair" of candidate and target. As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
+5. Locate where the targets at the bottom. Targets are not in tidy and proper manner, so we need to detect them. We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
+
+6.Calcuate the similarity score for "each pair" of candidate and target. As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
 
 # Result
 Geetest CAPTCHA is quite hard, my bot can only solve 25% of them.
