@@ -12,9 +12,13 @@ In today's digital era, about 40% of network traffice is driven by bot. Usually,
 
 Traditional CAPTCHAs typically ask you to recognize the text from a image of printed text under some shape deformations. With technology advance, more bots can solve these CAPTCHAs. Hence, some companies are designing more complicated to challenge bots, Geetest is one of them.Geetest's CAPTCHAs determine if you are human by your answer and how you answer CAPTCHAs (e.g. a human being cannot answer a test in less than 0.01s).
 
-## CAPTCHA Solving Time
-The kind of Geetest CAPTCHA] I tried to solve is as below. It requires your bot to click the icons on the main pane according to the targets indicated and act like a human being.It is easy to make your bot act like a human being, you just need to introduce some pause between two consecutive clicks. Therefore, the rest of this article will focus on how to find those targets in main pane.
+## CAPTCHA Background
+The kind of Geetest CAPTCHA I tried to solve is as below. It requires your bot to click the icons on the main pane according to the targets indicated and act like a human being.It is easy to make your bot act like a human being, you just need to introduce some pause between two consecutive clicks. Therefore, the rest of this article will focus on how to find those targets in main pane.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/icon-CAPTCHA-example.jpg" alt="CAPTCHA Example" %}
+
+Here's a Geetest CAPTCHA I managed to crack with image processing and automation technology.
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
+
 Remark: CAPTCHA is available at [https://www.geetest.com/en](https://www.geetest.com/en), 
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-page.jpg" alt="CAPTCHA Demo Page" %}
 
@@ -135,7 +139,6 @@ action.perform()
 
 ## Result
 Geetest CAPTCHA is quite hard, my bot can only solve 25% of them.
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
 
 Basically, my bot cannot overcome the CAPTCHAs because it cannot recognize targets in main pane. On the other hand, given that my bot can recognize targets, the pause between two consecutive clicks is enough to make the system think my bot is a human being.
 Here are some reasons that why my bot failed on 75% of all CAPTCHAs.
