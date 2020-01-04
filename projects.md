@@ -11,7 +11,7 @@ In the past, I thought I mastered some new technologies, knowledge after watchin
 Below are projects I have worked on and well-documented.
 
 #### Attempt To Solve Geetest CAPTCHA
-CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) is widely adopted in various websites to protect them against bots. Geetest is a Chine company specializing in CAPTCHA Research and Development, it serves numerous multinational corporations, e.g Nike, Xiaomi. 
+CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) is widely adopted in various websites to protect them against bots. Geetest is a China company specializing in CAPTCHA Research and Development, it serves numerous multinational corporations, e.g Nike, Xiaomi. 
 
 I attempted to crack their CAPTCHAs on Geetest website with several techniques, including image processing and selenium automation. I summarised how I approach this problem, how I integrate different skills together to solve this problem in below write-up.
 
