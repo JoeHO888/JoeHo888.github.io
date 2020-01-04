@@ -7,12 +7,12 @@ excerpt: "Attempt To Solve Geetest CAPTCHA"
 aside: true
 ---
 
-# What is Geetest CAPTCHA?
+## What is Geetest CAPTCHA?
 In today's digital era, about 40% of network traffice is driven by bot. Usually, we only want human access our applications. For example, we want to prevent Ticket Bots for concerts. That's where CAPTCHA comes in. CAPTCHA stands for "Completely Automated Public Turing test to tell Computers and Humans Apart", it is a kind of test distinguish Human from Computing and thus blocks the bots.
 
 Traditional CAPTCHAs typically ask you to recognize the text from a image of printed text under some shape deformations. With technology advance, more bots can solve these CAPTCHAs. Hence, some companies are designing more complicated to challenge bots, Geetest is one of them.Geetest's CAPTCHAs determine if you are human by your answer and how you answer CAPTCHAs (e.g. a human being cannot answer a test in less than 0.01s).
 
-# CAPTCHA Solving Time
+## CAPTCHA Solving Time
 The kind of Geetest CAPTCHA] I tried to solve is as below. It requires your bot to click the icons on the main pane according to the targets indicated and act like a human being.It is easy to make your bot act like a human being, you just need to introduce some pause between two consecutive clicks. Therefore, the rest of this article will focus on how to find those targets in main pane.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/icon-CAPTCHA-example.jpg" alt="CAPTCHA Example" %}
 Remark: CAPTCHA is available at [https://www.geetest.com/en](https://www.geetest.com/en), 
