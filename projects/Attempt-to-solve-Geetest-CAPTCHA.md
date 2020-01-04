@@ -43,16 +43,8 @@ We will take this CAPTCHA as an example.
 The CAPTCHA actually comes from the picture below. You can find it by searching "geetest_item_img" class in browser debug console.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/download-CAPTCHA.jpg" alt="Picture for terminology explanation" caption="Search 'geetest_item_img' to obtain the geetest CAPTCHA" %}
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-CAPTCHA.jpg" alt="Demo CAPTCHA" caption="Demo CAPTCHA" %}
-
-### 2. Extract each target from the CAPTCHA 
-
-We can see that all targets are located at the bottom with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
-
-a)Hard code the length of space. This method will fail, as it remove remove some part of some targets or add addtional detail to some targets. Hence, out bot need to be smart enough to recognize each target
-
-b) 
 	
-### 3. Remove the background in the main pane 
+### 2. Remove the background in the main pane 
 
 By doing so, we can reduce the computation and increase accuracy. First, in order to find the targets in main pane, we need to compute the similarity between an area and a target, we can only do this computation on certain areas if we remove unneccssary pixels (i.e. background). Second, the less areas we need to check, the higher accuracy we can obtain.
   
@@ -83,7 +75,7 @@ References:
 1. [https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
 2. [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
 
-### 4. Locate where the icons are in the main pane
+### 3. Locate where the icons are in the main pane
 
 The basic idea is to extract the external boundary of each icon, then we can get some "critical" points of that boundary (i.e. the points can form the boundary via joining them with various straight lines.). After that, we can draw the bounding box (a.k.a rectangle) from these points by comparing these points' x and y coordinates, e.g. top left corner of the boundary box is the top left point
 
@@ -100,10 +92,10 @@ _, contours, hierarchy = cv2.findContours(pane, cv2.RETR_EXTERNAL, cv2.CHAIN_APP
 Remark:
 The boundary we are looking for is  external boundary, so that we can obtain the largest boundary box for the icon and avoid too many computation if we obtain all boundaries. A counter example is as below: https://docs.opencv.org/3.4/d9/d8b/tutorial_py_contours_hierarchy.html
  
-### 5.  Locate where the targets at the bottom
+### 4.  Locate where the targets at the bottom
 Targets are not in tidy and proper manner, so we need to detect them. We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
 
-### 6. Calcuate the similarity for each pair of icons and targets
+### 5. Calcuate the similarity for each pair of icons and targets
 Actually, we do not only compare the similarity between each pair of icons and targets. Instead, we keep rotate the target and compare the similarity between each rotation of it and an icon, then denotate the highest similarity as the similarity of that target and icon. Why are we doing so? Because the icons and targets have different degrees of rotation, doing so can improve the accuracy.
 
   ```
@@ -124,7 +116,7 @@ cv2.matchTemplate used above is decided for object detection. Therefore, we can 
 
 However, we will have low accuracy if we apply it directly. First, targets and icons in the CAPTCHA are not similar, we will have lots of false positive if we do not do some cleansing beforehand (e.g. background removal and thresholding). Second, targets and icons are in the same size, the cv2.matchTemplate can not handle this scenario. (We actually do some resizing, but it is rather trival, so we do not discuss it here)
 
-### 7. Let our bot click the icons selected.
+### 6. Let our bot click the icons selected.
 
 We use selenium to simulate a human being to click the icons one by one with random pause between two consecutive clicks.
 
