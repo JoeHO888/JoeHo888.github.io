@@ -34,23 +34,34 @@ To explain the solving steps below, a few terms will be used to describe differe
 https://www.geetest.com/show
 We will take this CAPTCHA as an example.
 
-1.Download the CAPTCHA. The CAPTCHA actually comes from the picture below. You can find it by searching "geetest_item_img" class in browser debug console.
+### 1. Download the CAPTCHA. 
+
+The CAPTCHA actually comes from the picture below. You can find it by searching "geetest_item_img" class in browser debug console.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/download-CAPTCHA.jpg" alt="Picture for terminology explanation" caption="Search 'geetest_item_img' to obtain the geetest CAPTCHA" %}
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-CAPTCHA.jpg" alt="Demo CAPTCHA" caption="Demo CAPTCHA" %}
 
-2.Extract each target from the CAPTCHA. We can see that all targets are located at the bottom with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
-	a)Hard code the length of space. This method will fail, as it remove remove some part of some targets or add addtional detail to some targets. Hence, out bot need to be smart enough to recognize each target
-	b) 
+### 2. Extract each target from the CAPTCHA. 
+
+We can see that all targets are located at the bottom with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
+
+a)Hard code the length of space. This method will fail, as it remove remove some part of some targets or add addtional detail to some targets. Hence, out bot need to be smart enough to recognize each target
+
+b) 
 	
-3.Remove the background in the main pane. By doing so, we can reduce the computation and increase accuracy. First, in order to find the targets in main pane, we need to compute the similarity between an area and a target, we can only do this computation on certain areas if we remove unneccssary pixels (i.e. background). Second, the less areas we need to check, the higher accuracy we can obtain.
+### 3. Remove the background in the main pane. 
+
+By doing so, we can reduce the computation and increase accuracy. First, in order to find the targets in main pane, we need to compute the similarity between an area and a target, we can only do this computation on certain areas if we remove unneccssary pixels (i.e. background). Second, the less areas we need to check, the higher accuracy we can obtain.
   
   To remove the background, there are 2 steps.
   
   Convert the CAPTCHA into grey scale picture. It can reduce the computation complexity by a factor of 3, as the total number of pixels in a grey scale picture is one-third of that in original CAPTCHA consisting 3 channels (Red, Green and Blue). Besides, it makes background removal easier, we just need to decide a threshold for grey-scale picture instead of total 3 thresholds for Red, Green and Blue channels.
+
   ``` python
   img_grey = cv2.imread(image_path,0) # image_path is the path where the CAPTCHA stored
   ```
+
   Set a threshold to remove pixels in main_pane which have value larger than that, as targets in main pane are constructed by white pixels.
+
   ``` python
   # crop image
   main_pane = img_grey[:350,:] # Extract the main_pane from the CAPTCHA
@@ -68,25 +79,51 @@ References:
 1. [https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
 2. [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
 
-4.Locate where the icons are in the main pane. The basic idea is to extract the external boundary of each icon, then we can get some "critical" points of that boundary (i.e. the points can form the boundary via joining them with various straight lines.). After that, we can draw the bounding box (a.k.a rectangle) from these points by comparing these points' x and y coordinates, e.g. top left corner of the boundary box is the top left point
+### 4. Locate where the icons are in the main pane. 
+
+The basic idea is to extract the external boundary of each icon, then we can get some "critical" points of that boundary (i.e. the points can form the boundary via joining them with various straight lines.). After that, we can draw the bounding box (a.k.a rectangle) from these points by comparing these points' x and y coordinates, e.g. top left corner of the boundary box is the top left point
+
+Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
+
+  ```
+_, contours, hierarchy = cv2.findContours(pane, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) #Calculate the contours. Boundary is the layman term of contour
+  ```
+
+  ```
+(x, y, w, h) = cv2.boundingRect(contour) #Obtain the coordinates of top left corner (x,y), width and height of bounding box
+  ```
 
 Remark:
 The boundary we are looking for is  external boundary, so that we can obtain the largest boundary box for the icon and avoid too many computation if we obtain all boundaries. A counter example is as below: https://docs.opencv.org/3.4/d9/d8b/tutorial_py_contours_hierarchy.html
-  
- Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
+ 
+### 5.  Locate where the targets at the bottom.
+Targets are not in tidy and proper manner, so we need to detect them. We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
 
-5. Locate where the targets at the bottom. Targets are not in tidy and proper manner, so we need to detect them. We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
+### 6. Calcuate the similarity score for "each pair" of candidate and target.
 
-6.Calcuate the similarity score for "each pair" of candidate and target. As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
+As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
 
-# Result
+### 7. Let our bot click the icons selected.
+
+We use selenium to simulate a human being to click the icons one by one with random pause between two consecutive clicks.
+
+  ```
+ele=driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Loading'])[1]/following::div[1]")
+action = webdriver.common.action_chains.ActionChains(driver)
+action.move_to_element_with_offset(ele, centre_x, centre_y) #  centre_x, centre_y are the x,y coordinates of center of selected icon
+time.sleep(randint(100,700)/1000) # random pause
+action.click()
+action.perform()
+  ```
+
+## Result
 Geetest CAPTCHA is quite hard, my bot can only solve 25% of them.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
 
 Basically, my bot cannot overcome the CAPTCHAs because it cannot recognize targets in main pane. On the other hand, given that my bot can recognize targets, the pause between two consecutive clicks is enough to make the system think my bot is a human being.
 Here are some reasons that why my bot failed on 75% of all CAPTCHAs.
 
-# Improvement Areas 
+## Improvement Areas 
 There are a few reasons that my bot cannot solve those CAPTCHAs.
 
 First, I use fixed and hard-coded threshold for background removal in all CAPTCHAs, so it cannot cater all CAPTCHAs, either some parts of the icons are removed or too much detail are left in the main pane. 
