@@ -34,13 +34,13 @@ To explain the solving steps below, a few terms will be used to describe differe
 https://www.geetest.com/show
 We will take this CAPTCHA as an example.
 
-### 1. Download the CAPTCHA. 
+### 1. Download the CAPTCHA
 
 The CAPTCHA actually comes from the picture below. You can find it by searching "geetest_item_img" class in browser debug console.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/download-CAPTCHA.jpg" alt="Picture for terminology explanation" caption="Search 'geetest_item_img' to obtain the geetest CAPTCHA" %}
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-CAPTCHA.jpg" alt="Demo CAPTCHA" caption="Demo CAPTCHA" %}
 
-### 2. Extract each target from the CAPTCHA. 
+### 2. Extract each target from the CAPTCHA 
 
 We can see that all targets are located at the bottom with some spaces between two consecutive targets, we can cut the whole area where all targets are on, then separate the targets one by one. There are two approaches:
 
@@ -48,7 +48,7 @@ a)Hard code the length of space. This method will fail, as it remove remove some
 
 b) 
 	
-### 3. Remove the background in the main pane. 
+### 3. Remove the background in the main pane 
 
 By doing so, we can reduce the computation and increase accuracy. First, in order to find the targets in main pane, we need to compute the similarity between an area and a target, we can only do this computation on certain areas if we remove unneccssary pixels (i.e. background). Second, the less areas we need to check, the higher accuracy we can obtain.
   
@@ -79,7 +79,7 @@ References:
 1. [https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
 2. [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
 
-### 4. Locate where the icons are in the main pane. 
+### 4. Locate where the icons are in the main pane
 
 The basic idea is to extract the external boundary of each icon, then we can get some "critical" points of that boundary (i.e. the points can form the boundary via joining them with various straight lines.). After that, we can draw the bounding box (a.k.a rectangle) from these points by comparing these points' x and y coordinates, e.g. top left corner of the boundary box is the top left point
 
@@ -96,10 +96,10 @@ _, contours, hierarchy = cv2.findContours(pane, cv2.RETR_EXTERNAL, cv2.CHAIN_APP
 Remark:
 The boundary we are looking for is  external boundary, so that we can obtain the largest boundary box for the icon and avoid too many computation if we obtain all boundaries. A counter example is as below: https://docs.opencv.org/3.4/d9/d8b/tutorial_py_contours_hierarchy.html
  
-### 5.  Locate where the targets at the bottom.
+### 5.  Locate where the targets at the bottom
 Targets are not in tidy and proper manner, so we need to detect them. We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
 
-### 6. Calcuate the similarity score for "each pair" of candidate and target.
+### 6. Calcuate the similarity score for each pair of icons and targets
 
 As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
 
