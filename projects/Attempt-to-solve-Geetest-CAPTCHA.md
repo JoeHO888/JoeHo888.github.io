@@ -99,9 +99,26 @@ The boundary we are looking for is  external boundary, so that we can obtain the
 ### 5.  Locate where the targets at the bottom
 Targets are not in tidy and proper manner, so we need to detect them. We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
 
-### 6. Calcuate the similarity score for each pair of icons and targets
+### 6. Calcuate the similarity for each pair of icons and targets
+Actually, we do not only compare the similarity between each pair of icons and targets. Instead, we keep rotate the target and compare the similarity between each rotation of it and an icon, then denotate the highest similarity as the similarity of that target and icon. Why are we doing so? Because the icons and targets have different degrees of rotation, doing so can improve the accuracy.
 
-As observed, icons and targets have different degrees of rotation, so we should try to calculate the similarity between every rotation of an icon and a target. In order words, the similarity score is the highest similarity between every rotation of an icon and a target. Then, we can base on the similarities for all pairs to determine best fit of candidates for each target.
+  ```
+# Rotate the target by d degree each time and calculate the similarity
+def calculate_max_matching(target,icon,d):
+    largest_val = 0
+    for degree in range(0,360,d):
+        rotated_target = ndimage.rotate(target, degree, reshape=False) # rotated_target is a transformation of target under certain degree of rotation
+        res = cv2.matchTemplate(icon,rotated_target,cv2.TM_CCOEFF_NORMED) #Calculate the similarity
+        min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res) #Calculate the similarity
+        if max_val > largest_val:
+            largest_val = max_val
+    return largest_val
+  ```
+
+Remark:
+cv2.matchTemplate used above is decided for object detection. Therefore, we can use this after we get the target to finde the target location in main pane theoretically. 
+
+However, we will have low accuracy if we apply it directly. First, targets and icons in the CAPTCHA are not similar, we will have lots of false positive if we do not do some cleansing beforehand (e.g. background removal and thresholding). Second, targets and icons are in the same size, the cv2.matchTemplate can not handle this scenario. (We actually do some resizing, but it is rather trival, so we do not discuss it here)
 
 ### 7. Let our bot click the icons selected.
 
@@ -127,10 +144,12 @@ Here are some reasons that why my bot failed on 75% of all CAPTCHAs.
 There are a few reasons that my bot cannot solve those CAPTCHAs.
 
 First, I use fixed and hard-coded threshold for background removal in all CAPTCHAs, so it cannot cater all CAPTCHAs, either some parts of the icons are removed or too much detail are left in the main pane. 
-One approach to solve that is through sampling, we can collect many CAPTCHAs, test different kind of thresholds (Percentage Threshold) which only keep the top several % of brightest pixels, then apply this new "Percentage Threshold" on new CAPTCHAs. 
 
+One approach to solve that is through sampling, we can collect many CAPTCHAs, test different kind of thresholds (Percentage Threshold) which only keep the top several % of brightest pixels, then apply this new "Percentage Threshold" on new CAPTCHAs. 
 However, this approach has two drawbacks. It will require many human efforts, as there is no metric to measure how good this Percentage Threshold is, so you need to determine the every possibility of Percentage Threshold by yourself. 
 Besides, this approach cannot tackle all CAPTCHAs, as the Percentage Threshold will no longer apply if a new CAPTCHA has a complete different distribution of pixel values.
+
+Another approach is to adopt Adaptive Thresholding which determines the threshold for a pixel based on a small region around it. I think it is rather promising, but I haven't tried this.
 
 Second, even though I can find a good threshold which is able separate an icon from the background, it is still insufficient, as the icons may have different color. In other words, we need several excellent thresholds for different icons to separate them from their neightbour background.
 I haven't found a good approach for that, feel free to comment if you have good idea!
