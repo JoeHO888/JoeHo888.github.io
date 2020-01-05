@@ -73,11 +73,11 @@ main_pane = cv2.blur(main_pane,(3,3)) # Adequate blurring can reduce image noise
 main_pane[main_pane<color_threshold] = 0
 main_pane[main_pane>=color_threshold] = 255	
   ```
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/preprocessed_main_pane.jpg" alt="Remove background in main_pane" caption="Remove background in main_pane" %}
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/preprocessed_main_pane.jpg" alt="Remove background in main pane" caption="Remove background in main_pane" %}
 Remark: 
 Blurring make each pixel being affected by its  surrounding pixels. In this case, some noise (or some pixel has extraordinary higher/lower value) will be "averaged" by the values nearby, thus can be removed.
 
-In terms of mathematics, blurring is to convolve a kernel with an image, which is the same technique used in Convolutional neural network (a kind of state of art in Deep Lerning/Artificial Intelligence). You may refer to below materials for more information.
+In terms of mathematics, blurring is to convolve a kernel with an image, which is the same technique used in Convolutional neural network (a kind of state of art in Deep Learning/Artificial Intelligence). You may refer to below materials for more information.
 
 References:
 1. [https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
@@ -102,7 +102,7 @@ _, contours, hierarchy = cv2.findContours(pane, cv2.RETR_EXTERNAL, cv2.CHAIN_APP
 Although we know targets are at the bottom of main pane, they are positioned in a row and not in a tidy and proper manner. Hence, we spend some efforts to extract them. Fortunately, We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/targets-located-in-main-pane.jpg" alt="Locate targets at the bottom" caption="Locate targets at the bottom" %}
 
-### 5. Calcuate the similarity for each pair of icons and targets
+### 5. Calculate the similarity for each pair of icons and targets
 Actually, we do not only compare the similarity between each pair of icons and targets. Instead, we keep rotate the target and compare the similarity between each rotation of it and an icon, then denotate the highest similarity as the similarity of that target and icon. Why are we doing so? Because the icons and targets have different degrees of rotation, doing so can improve the accuracy.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/different-rotations-for-Icon-and-target.jpg" alt="Icon and Target have different degrees of rotation" caption="Icon and Target have different degrees of rotation" %}
 ```
@@ -121,8 +121,8 @@ def calculate_max_matching(target,icon,d):
 Remark:
 cv2.matchTemplate used above is decided for object detection. Theoretically, we can use this to find corresponding icons  if we already what are the targets are.
 
-However, we will have low accuracy if we apply it directly. First, targets and icons in the CAPTCHA are not the same, we will have low accuracy if we do not do some cleansing beforehand (e.g. background removal and thresholding). Second, targets and icons are in the different sizes, the cv2.matchTemplate can not handle this scenario. (We actually do some resizing, but it is rather trival, so we do not discuss it here)
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/match-icons-with-targets.jpg" alt="Match icons in main_pane with targets" caption="Match icons in main_pane with targets" %}
+However, we will have low accuracy if we apply it directly. First, targets and icons in the CAPTCHA are not the same, we will have low accuracy if we do not do some cleansing beforehand (e.g. background removal and thresholding). Second, targets and icons are in the different sizes, the cv2.matchTemplate can not handle this scenario. (We actually do some resizing, but it is rather trivial, so we do not discuss it here)
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/match-icons-with-targets.jpg" alt="Match icons in main pane with targets" caption="Match icons in main_pane with targets" %}
 
 ### 6. Let our bot click the icons selected.
 
@@ -157,7 +157,7 @@ However, this approach has two drawbacks. It will require many human efforts, as
 Besides, this approach cannot tackle all CAPTCHAs, as the Percentage Threshold will no longer apply if a new CAPTCHA has a complete different distribution of pixel values.
 
 Another approach is to adopt Adaptive Thresholding which determines the threshold for a pixel based on a small region around it. 
-In other words, this approach uses several local thresholds to find icosn instead global threshold used in the demo or suggested in last approach.
+In other words, this approach uses several local thresholds to find icons instead global threshold used in the demo or suggested in last approach.
 
 Second, even though I can find a good threshold which is able separate an icon from the background, it is still insufficient, as all icons may have different color. In other words, we need several excellent thresholds for different icons to separate them from their neightbour background.
 I haven't found a good approach for that, feel free to comment if you have good idea!
@@ -166,4 +166,4 @@ I haven't found a good approach for that, feel free to comment if you have good 
 Source Code: [https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving](https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving)
 
 This article is also published in Medium: 
- 
+[https://medium.com/@joeho_15265/attempt-to-solve-geetest-captcha-ae59e9bba5d6](https://medium.com/@joeho_15265/attempt-to-solve-geetest-captcha-ae59e9bba5d6)
