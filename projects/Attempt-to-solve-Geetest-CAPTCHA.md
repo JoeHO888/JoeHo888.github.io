@@ -30,7 +30,7 @@ Remark: [English CAPTCHA](https://www.geetest.com/en) was available previously, 
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/chinese-demo-page.jpg" alt="Chinese CAPTCHA Demo Page" caption="Chinese CAPTCHA" %}
 
 ## Technology Stack
-1. Selenium (Make our bot behave like a human being to click the icons in CAPTCHA)
+1. Selenium (Make our bot behaves like a human being to click the icons in CAPTCHA)
 2. OpenCV (Our bot uses it to solve the CAPTCHA through Image Processing and Object Detection)
 3. Other Libraries (matplotlib, urllib, numpy, scipy, skimage, time, Pillow)
 
