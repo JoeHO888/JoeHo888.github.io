@@ -148,14 +148,18 @@ Here are some reasons that why my bot fails in 95% of all CAPTCHAs.
 There are a few reasons that my bot cannot solve those CAPTCHAs.
 
 First, I use fixed and hard-coded threshold for background removal in all CAPTCHAs, so it cannot cater all CAPTCHAs, either some parts of the icons are removed or too much detail are left in the main pane. 
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/low-threshold-in-background-removal.jpg" alt="Low threshold for background removal" caption="Low threshold for background removal" %}
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/high-threshold-in-background-removal.jpg" alt="High threshold for background removal" caption="High threshold for background removal" %}
 
-One approach to solve that is through sampling, we can collect many CAPTCHAs, test different kind of thresholds (Percentage Threshold) which only keep the top several % of brightest pixels, then apply this new "Percentage Threshold" on new CAPTCHAs. 
+
+One approach to solve that is through sampling, we can collect many CAPTCHAs, test different kind of thresholds (Percentage Threshold) which only keep the top several percentages of brightest pixels, then apply this new "Percentage Threshold" on new CAPTCHAs. 
 However, this approach has two drawbacks. It will require many human efforts, as there is no metric to measure how good this Percentage Threshold is, so you need to determine the every possibility of Percentage Threshold by yourself. 
 Besides, this approach cannot tackle all CAPTCHAs, as the Percentage Threshold will no longer apply if a new CAPTCHA has a complete different distribution of pixel values.
 
-Another approach is to adopt Adaptive Thresholding which determines the threshold for a pixel based on a small region around it. I think it is rather promising, but I haven't tried this.
+Another approach is to adopt Adaptive Thresholding which determines the threshold for a pixel based on a small region around it. 
+In other words, this approach uses several local thresholds to find icosn instead global threshold used in the demo or suggested in last approach.
 
-Second, even though I can find a good threshold which is able separate an icon from the background, it is still insufficient, as the icons may have different color. In other words, we need several excellent thresholds for different icons to separate them from their neightbour background.
+Second, even though I can find a good threshold which is able separate an icon from the background, it is still insufficient, as all icons may have different color. In other words, we need several excellent thresholds for different icons to separate them from their neightbour background.
 I haven't found a good approach for that, feel free to comment if you have good idea!
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/different-colors-icons.jpg" alt="Different Colors Icons" caption="Different Colors Icons" %}
 
