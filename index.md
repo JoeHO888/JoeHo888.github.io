@@ -20,5 +20,8 @@ I'm Joe, I'm working in a Multinational Company as a IT professional. My fulltim
 
 I'm a Competition Master in [Kaggle](https://www.kaggle.com/joe1995 "Kaggle Profile") and hold [Microsoft Certified Azure Fundamentals Certificate](https://www.youracclaim.com/badges/cdd6d507-7416-43c1-b08e-8d3838f04035/linked_in_profile "Microsoft Certified Azure Fundamentals Certificate")
 
-In my leisure time, I learn cloud computing, devops, algorithms, system design, data science. 
+I also did some projects for fun and learning purpose. My projects are as below,
+* [Attempt To Solve Geetest CAPTCHA](https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/)
+
+In my leisure time, I learn cloud computing, devops, algorithms, system design, data science.
 
