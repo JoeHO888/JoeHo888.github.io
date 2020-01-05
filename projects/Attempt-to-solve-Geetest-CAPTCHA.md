@@ -50,24 +50,25 @@ The CAPTCHA actually comes from the picture below. You can find it by searching 
 
 By doing so, we can reduce the computation and increase accuracy. First, in order to find the targets in main pane, we need to compute the similarity between an area and a target, we can only do this computation on certain areas if we remove unneccssary pixels (i.e. background). Second, the less areas we need to check, the higher accuracy we can obtain.
   
-  To remove the background, there are 2 steps.
+To remove the background, there are 2 steps.
   
-  Convert the CAPTCHA into grey scale picture. It can reduce the computation complexity by a factor of 3, as the total number of pixels in a grey scale picture is one-third of that in original CAPTCHA consisting 3 channels (Red, Green and Blue). Besides, it makes background removal easier, we just need to decide a threshold for grey-scale picture instead of total 3 thresholds for Red, Green and Blue channels.
+Convert the CAPTCHA into grey scale picture. It can reduce the computation complexity by a factor of 3, as the total number of pixels in a grey scale picture is one-third of that in original CAPTCHA consisting 3 channels (Red, Green and Blue). Besides, it makes background removal easier, we just need to decide a threshold for grey-scale picture instead of total 3 thresholds for Red, Green and Blue channels.
 
-  ``` python
-  img_grey = cv2.imread(image_path,0) # image_path is the path where the CAPTCHA stored
+``` python
+img_grey = cv2.imread(image_path,0) # image_path is the path where the CAPTCHA stored
+```
+
+Set a threshold to remove pixels in main_pane which have value larger than that, as targets in main pane are constructed by white pixels.
+
+``` python
+# crop image
+main_pane = img_grey[:350,:] # Extract the main_pane from the CAPTCHA
+color_threshold = 180
+main_pane = cv2.blur(main_pane,(3,3)) # Adequate blurring can reduce image noise
+main_pane[main_pane<color_threshold] = 0
+main_pane[main_pane>=color_threshold] = 255	
   ```
-
-  Set a threshold to remove pixels in main_pane which have value larger than that, as targets in main pane are constructed by white pixels.
-
-  ``` python
-  # crop image
-  main_pane = img_grey[:350,:] # Extract the main_pane from the CAPTCHA
-  color_threshold = 180
-  main_pane = cv2.blur(main_pane,(3,3)) # Adequate blurring can reduce image noise
-  main_pane[main_pane<color_threshold] = 0
-  main_pane[main_pane>=color_threshold] = 255	
-  ```
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/preprocessed_main_pane.jpg" alt="Remove background in main_pane" caption="Remove background in main_pane" %}
 Remark: 
 Blurring make each pixel being affected by its  surrounding pixels. In this case, some noise (or some pixel has extraordinary higher/lower value) will be "compensated" by the values nearby, thus can be removed.
 
@@ -83,24 +84,25 @@ The basic idea is to extract the external boundary of each icon, then we can get
 
 Draw a bounding box for each icon in main pane. It serves two purpose.First, it visualizes the result, thus helps me debug. Second, the bounding boxes provide me the exact coordinates, we use coordinates to get a patch of area and resize that patch to the size of targets so that we can enhance the accuracy of our bot.
 
-  ```
+```
 _, contours, hierarchy = cv2.findContours(pane, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) #Calculate the contours. Boundary is the layman term of contour
-  ```
+```
 
-  ```
+```
 (x, y, w, h) = cv2.boundingRect(contour) #Obtain the coordinates of top left corner (x,y), width and height of bounding box
-  ```
-
+```
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/icons-located-in-main-pane.jpg" alt="Locate icons in the main pane" caption="Locate icons in the main pane" %}
 Remark:
 The boundary we are looking for is  external boundary, so that we can obtain the largest boundary box for the icon and avoid too many computation if we obtain all boundaries. A counter example is as below: https://docs.opencv.org/3.4/d9/d8b/tutorial_py_contours_hierarchy.html
- 
+
 ### 4.  Locate where the targets at the bottom
 Targets are not in tidy and proper manner, so we need to detect them. We can use the method described in last step to extract them without extra image processing, as the targets are already in black while the background are in white.
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/targets-located-in-main-pane.jpg" alt="Locate targets at the bottom" caption="Locate targets at the bottom" %}
 
 ### 5. Calcuate the similarity for each pair of icons and targets
 Actually, we do not only compare the similarity between each pair of icons and targets. Instead, we keep rotate the target and compare the similarity between each rotation of it and an icon, then denotate the highest similarity as the similarity of that target and icon. Why are we doing so? Because the icons and targets have different degrees of rotation, doing so can improve the accuracy.
 
-  ```
+```
 # Rotate the target by d degree each time and calculate the similarity
 def calculate_max_matching(target,icon,d):
     largest_val = 0
@@ -111,25 +113,27 @@ def calculate_max_matching(target,icon,d):
         if max_val > largest_val:
             largest_val = max_val
     return largest_val
-  ```
+```
 
 Remark:
 cv2.matchTemplate used above is decided for object detection. Therefore, we can use this after we get the target to finde the target location in main pane theoretically. 
 
 However, we will have low accuracy if we apply it directly. First, targets and icons in the CAPTCHA are not similar, we will have lots of false positive if we do not do some cleansing beforehand (e.g. background removal and thresholding). Second, targets and icons are in the same size, the cv2.matchTemplate can not handle this scenario. (We actually do some resizing, but it is rather trival, so we do not discuss it here)
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/match-icons-with-targets.jpg" alt="Match icons in main_pane with targets" caption="Match icons in main_pane with targets" %}
 
 ### 6. Let our bot click the icons selected.
 
 We use selenium to simulate a human being to click the icons one by one with random pause between two consecutive clicks.
 
-  ```
+```
 ele=driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Loading'])[1]/following::div[1]")
 action = webdriver.common.action_chains.ActionChains(driver)
 action.move_to_element_with_offset(ele, centre_x, centre_y) #  centre_x, centre_y are the x,y coordinates of center of selected icon
 time.sleep(randint(100,700)/1000) # random pause
 action.click()
 action.perform()
-  ```
+```
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/complete-demo-CAPTCHA.gif" alt="Solve the CAPTCHA" caption="Solve the CAPTCHA" %}
 
 ## Result
 Geetest CAPTCHA is quite hard, my bot can only solve 25% of them.
