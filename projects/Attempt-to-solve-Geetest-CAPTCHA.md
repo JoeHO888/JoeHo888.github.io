@@ -19,8 +19,9 @@ The kind of Geetest CAPTCHA I tried to solve is as below. It requires your bot t
 Here's a Geetest CAPTCHA I managed to crack with image processing and automation technology.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
 
-Remark: CAPTCHA is available at [https://www.geetest.com/en](https://www.geetest.com/en), 
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-page.jpg" alt="CAPTCHA Demo Page" %}
+Remark: CAPTCHA was available at [https://www.geetest.com/en](https://www.geetest.com/en), but it is unavailable now. However, chinese version of this kind of CAPTCHA is still available, so I will use chinese CAPTCHA in below demonstration section.
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/english-demo-page.jpg" alt="English CAPTCHA Demo Page" %}
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/chinese-demo-page.jpg" alt="Chinese CAPTCHA Demo Page" %}
 
 ## Technology Stack
 1. Selenium (Atutomatically to click the maine pane of the CAPTCHA)
@@ -37,6 +38,7 @@ To explain the solving steps below, a few terms will be used to describe differe
 ## CAPTCHA Solving Steps
 https://www.geetest.com/show
 We will take this CAPTCHA as an example.
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-CAPTCHA-capture.jpg" alt="CAPTCHA Demo"%}
 
 ### 1. Download the CAPTCHA
 
