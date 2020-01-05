@@ -19,13 +19,13 @@ The kind of Geetest CAPTCHA I tried to solve is as below. It requires your bot t
 Here's a Geetest CAPTCHA I managed to crack with image processing and automation technology.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
 
-Remark: CAPTCHA was available at [https://www.geetest.com/en](https://www.geetest.com/en), but it is unavailable now. However, chinese version of this kind of CAPTCHA is still available, so I will use chinese CAPTCHA in below demonstration section.
+Remark: [English CAPTCHA](https://www.geetest.com/en) was available previously, but it is unavailable now. However, [chinese version](https://www.geetest.com/show) of this kind of CAPTCHA is still available, so I will use chinese CAPTCHA in below demonstration section.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/english-demo-page.jpg" alt="English CAPTCHA Demo Page" %}
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/chinese-demo-page.jpg" alt="Chinese CAPTCHA Demo Page" %}
 
 ## Technology Stack
-1. Selenium (Atutomatically to click the maine pane of the CAPTCHA)
-2. OpenCV (Image Processing, finding the targets on the main pane)
+1. Selenium (Make our bot behave like a human being to click the icons in CAPTCHA)
+2. OpenCV (Our bot uses it to solve the CAPTCHA through Image Processing and Object Detection)
 3. Other Libraries (matplotlib, urllib, numpy, scipy, skimage, time, Pillow)
 
 ## Terminology
@@ -36,20 +36,19 @@ To explain the solving steps below, a few terms will be used to describe differe
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/terminology-picture.jpg" alt="Picture for terminology explanation" caption="Green: Icons, Blue: Main Pane, Yellow: Target" %}
 
 ## CAPTCHA Solving Steps
-https://www.geetest.com/show
 We will take this CAPTCHA as an example.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-CAPTCHA-capture.jpg" alt="CAPTCHA Demo"%}
 
 ### 1. Download the CAPTCHA
 
-The CAPTCHA actually comes from the picture below. You can find it by searching "geetest_item_img" class in browser debug console.
+To download the CAPTCHA, we just need to download the main pane, as it also contains the targets at the bottom. Main pane belongs to "geetest_item_img" class, you may find it in browser debug console.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/download-CAPTCHA.jpg" alt="Picture for terminology explanation" caption="Search 'geetest_item_img' to obtain the geetest CAPTCHA" %}
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/demo-CAPTCHA.jpg" alt="Demo CAPTCHA" caption="Demo CAPTCHA" %}
-	
+
 ### 2. Remove the background in the main pane 
 
-By doing so, we can reduce the computation and increase accuracy. First, in order to find the targets in main pane, we need to compute the similarity between an area and a target, we can only do this computation on certain areas if we remove unneccssary pixels (i.e. background). Second, the less areas we need to check, the higher accuracy we can obtain.
-  
+Background removal can help us improve accuracy, as the bot may recognize some parts of the background as an icon which is a kind of  false positive.
+
 To remove the background, there are 2 steps.
   
 Convert the CAPTCHA into grey scale picture. It can reduce the computation complexity by a factor of 3, as the total number of pixels in a grey scale picture is one-third of that in original CAPTCHA consisting 3 channels (Red, Green and Blue). Besides, it makes background removal easier, we just need to decide a threshold for grey-scale picture instead of total 3 thresholds for Red, Green and Blue channels.
