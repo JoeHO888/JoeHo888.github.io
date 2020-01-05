@@ -8,26 +8,26 @@ aside: true
 ---
 
 ## What is Geetest CAPTCHA?
-In today's digital era, about 40% of network traffice is driven by bot. Usually, we only want human access our applications. For example, we want to prevent Ticket Bots for popular concerts. That's why CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) come into play, we use it to distinguish Human from bots and thus blocks the bots
+In today's digital era, about 40% of network traffic is driven by bot. Usually, we only want human access our applications. For example, we want to prevent Ticket Bots for popular concerts. That's why CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) comes into play, we use it to distinguish Human from bots and thus blocks the bots
 
-Traditional CAPTCHAs typically ask you to recognize the text from a image of printed text under some shape deformations. With technology advance, more bots can solve these CAPTCHAs. Hence, some companies are designing more complicated to challenge bots, Geetest is one of them.Geetest's CAPTCHAs determine if you are human by your answer and how you answer CAPTCHAs (e.g. a human being cannot answer a test in less than 0.01s).
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/old-CAPTCHA.jpg" alt="Traditional CAPTCHA" %}
+Traditional CAPTCHAs typically ask you to recognize the text from a image of printed text under some shape deformations.
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/old-CAPTCHA.jpg" alt="Traditional CAPTCHA" caption="Traditional CAPTCHA" %}
 
 With technology advance, more bots can solve these CAPTCHAs. Hence, some companies are designing more complicated CAPTCHAs to challenge bots, [Geetest](https://www.geetest.com/) is one of them. Geetest's CAPTCHAs determine if you are human by your answer and how you answer CAPTCHAs (e.g. a human being cannot answer a test in less than 0.01s).
 
 ## CAPTCHA Background
-The kind of Geetest CAPTCHA I tried to solve is as below. 
+The kind of Geetest CAPTCHA I try to solve is as below. 
 
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/icon-CAPTCHA-example.jpg" alt="CAPTCHA Example" %}
 
-There are some icons in the CAPTCHA. They may look like what the CAPTCHA asks you to select, or not. You need to select these icons in order specified by the CAPTCHA. On top of that, the solving process should be like a human being solving the CAPTCHA, e.g. if you can solve the CAPTCHA under 0.1 second, you will fail in the CAPTCHA.
+There are some icons in the CAPTCHA. They may look like what the CAPTCHA asks you to select, or not. You need to select these icons in order specified by the CAPTCHA. On top of that, the solving process should be like a human being solving the CAPTCHA, e.g. if you can solve the CAPTCHA under 0.1 seconds, you will fail in the CAPTCHA.
 
 Here's a Geetest CAPTCHA I am able to crack with image processing and automation technology. In this following sections, I will share how I try to crack the CAPTCHA.
 {% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/successful_cracking.gif" alt="Successful Case for cracking CAPTCHA" %}
 
 Remark: [English CAPTCHA](https://www.geetest.com/en) was available previously, but it is unavailable now. However, [chinese version](https://www.geetest.com/show) of this kind of CAPTCHA is still available, so I will use chinese CAPTCHA in below demonstration section.
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/english-demo-page.jpg" alt="English CAPTCHA Demo Page" %}
-{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/chinese-demo-page.jpg" alt="Chinese CAPTCHA Demo Page" %}
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/english-demo-page.jpg" alt="English CAPTCHA Demo Page" caption="English CAPTCHA" %}
+{% include figure.html image="/images/Attempt-To-Solve-Geetest-CAPTCHA/chinese-demo-page.jpg" alt="Chinese CAPTCHA Demo Page" caption="Chinese CAPTCHA" %}
 
 ## Technology Stack
 1. Selenium (Make our bot behave like a human being to click the icons in CAPTCHA)
