@@ -15,12 +15,23 @@ CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Ap
 
 I attempted to crack their CAPTCHAs on Geetest website with several techniques, including image processing and selenium automation. I summarised how I approach this problem, how I integrate different skills together to solve this problem in below write-up.
 
-Project URL: [https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/](https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/)
+Project URL: 
 
-Source Code: [https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving](https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving)
+[https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/](https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/)
+
+Source Code: 
+
+[https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving](https://github.com/JoeHO888/Geetest-Icon-CAPTCHA-Solving)
 
 #### Online Car Parking Platform - BinLuIS
-Project URL: [https://joeho888.github.io/projects/Online-Car-Parking-Platform-BinLuIS/](https://joeho888.github.io/projects/Online-Car-Parking-Platform-BinLuIS/)
+This is a group project I worked with my company's IT trainees during a one-month bootcamp. 
+
+Our Platform serves as a middleman to bring car parking service provider and customers together. Customers just need to tell us when and where they want their cars to be parked, our platform will arrange parking clerks to handle the rest of the car parking. On the other hand, car parking service providers can use this platform to reach more potential customers and grow.
+
+Project URL: 
+
+[https://joeho888.github.io/projects/Online-Car-Parking-Platform-BinLuIS/](https://joeho888.github.io/projects/Online-Car-Parking-Platform-BinLuIS/)
+
 Source Code: 
 1. [BinLuIS Backend](https://github.com/BinLuIS/ParkingSystemManagementConsole)
 2. [BinLuIS Mobile Web App](https://github.com/BinLuIS/ParkingMobileWebApp)
