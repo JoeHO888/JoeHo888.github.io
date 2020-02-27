@@ -1,10 +1,10 @@
 ---
-title: Primary-Key-Design-In-AWS-DynamoDB
+title: Primary Key Design In AWS DynamoDB
 categories:
 - AWS
 - DynamoDB
 excerpt: |
-  An experience sharing on how to design AWS DynamoDB primary key to facilitate its API calls
+  An experience sharing on how to design AWS DynamoDB primary key and utilizes in DynamoDB API calls
 feature_text: |
   ## Joe Ho Blog
   Primary Key Design In AWS DynamoDB
@@ -39,12 +39,22 @@ Remark: It is still feasible to filter items in DynamoDB other than partition ke
 
 There are some use cases for sort key.
 1. Consider a note-taking app. You can create a DynamoDB table which uses userId as partition key and noteId as sort key. In this scenario, you can use userId to retrieve all notes of the user and you can also get a specify note by providing userId and noteId.
-2. You can also use sort key to define hierarchical relationships. For example, in a table listing geographical locations, sort key can be defined [country]#[region]#[state]#[county]#[city]. In this scenario, you use "begin with" operatio to filter items with specify count, country and region pairs, etc.
+2. You can also use sort key to define hierarchical relationships. For example, in a table listing geographical locations, sort key can be defined [country]#[region]#[state]#[county]#[city]. In this scenario, you use "begin with" operatior to filter items with specify count, country and region pairs, etc.
 
-## Post-Exam
-After you complete the exam, you will know the result immediately. It describes how good you perform in areas which the exam examines, you can further learn from areas you are rather weak at.
+## Benefits of proper primary key design
+We will provide some examples here to illustrate the benefits of proper primary key design.
+Before diving in the comparsion, we need to define the metrics we are goind to measure.
+1. Cost (e.g. network costs, DynamoDB Cost)
+2. Performance
+3. Development efforts
 
-If you pass the AZ-900 Exam, you can view your certification on dashboard and share the link which someone else can view your certification.
+### Partiion key Selection
+
+### Sort Key for auxiliary function
+
+## Conclusion
+If your table is small, using partition key solely as the primary key is good enough, because you don't need to spend extra efforts to worry about sort key.
+However, it is better to use sort key in your table if you table grows, it can help you extend the capability of DynamoDB query and lower your cost.
 
 This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4](https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4)
 
