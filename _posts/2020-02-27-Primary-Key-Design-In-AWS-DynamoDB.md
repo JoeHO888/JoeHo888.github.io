@@ -45,7 +45,7 @@ There are some use cases for sort key.
 ## Benefits of proper primary key design
 We will provide some examples here to illustrate the benefits of proper primary key design.
 Before diving in the comparsion, we need to define the metrics we are goind to measure.
-1. Cost (e.g. network costs, DynamoDB Cost)
+1. DynamoDB Read Cost (you can consider it is proportional to the number items you application reads in DynamoDB table)
 2. Performance
 3. Development efforts
 
@@ -58,7 +58,16 @@ We will take below two tables as an example to illustrate the benefits of having
 {% include figure.html image="/images/2020-02-27-Primary-Key-Design-In-AWS-DynamoDB/table-with-sort-key.png" alt="Table B: Dynamodb Table with Sort Key" caption="Table B: Dynamodb Table with Sort Key" %}
 
 #### Retrieve all items from an user
-In the table A, you need to search the whole table so that you can retrieve all items of an user. In contrast, in table B, you can list all items with partition key only.
+##### Operation Used
+In table A, you need to use "scan" operation to get those items, which basically access every item in the table. In table B, you can use query to access that particular partition.
+
+##### Cost
+In table A, the cost for "scan" operation depends on the total number of items in the table, as "scan" opertion will read every item in the table.
+In table B, the cost is proportional to the size of partition you are trying to read, as you are reading the partition directly. Therefore, it is much cheaper than "scan" operation.
+
+##### Performance
+In table A, you need to search the whole table so that you can retrieve all items of an user. 
+In contrast, in table B, you can list all items with partition key only.
 
 #### Summary on Composite Key
 In this example, we can see that using Composite Key can help us to query all related items in a partition rather scanning the whole table. 
