@@ -69,9 +69,10 @@ In table B, the cost is proportional to the size of partition you are trying to 
 In table A, you need to search the whole table so that you can retrieve all items of an user. 
 In contrast, in table B, you can list all items with partition key only.
 
-#### Summary on Composite Key
+##### Summary on Composite Key
 In this example, we can see that using Composite Key can help us to query all related items in a partition rather scanning the whole table. 
 Usually, composite key is adopted when your table contain some sort of one-to-many relationships high cardinality attributes, i.e. userId and itemId in this example.
+{% include figure.html image="/images/2020-02-27-Primary-Key-Design-In-AWS-DynamoDB/simple-primary-key-v.s.-composite-key.png" alt="Comparison between Simple Primary Key & Composite Key" caption="Comparison between Simple Primary Key & Composite Key" %}
 
 ## Conclusion
 If your table is small, using partition key solely as the primary key is good enough, because you don't need to spend extra efforts to worry about sort key.
