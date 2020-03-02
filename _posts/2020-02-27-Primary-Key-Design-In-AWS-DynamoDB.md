@@ -66,8 +66,8 @@ In table A, the cost for "scan" operation depends on the total number of items i
 In table B, the cost is proportional to the size of partition you are trying to read, as you are reading the partition directly. Therefore, it is much cheaper than "scan" operation.
 
 ##### Performance
-In table A, you need to search the whole table so that you can retrieve all items of an user. 
-In contrast, in table B, you can list all items with partition key only.
+In table A, you need to search the whole table so that you can retrieve all items of an user, which is O(N).
+In contrast, in table B, DynamoDB uses hash of the partition key provided to lookup the corresponding partition, which is in O(1).
 
 ##### Summary on Composite Key
 In this example, we can see that using Composite Key can help us to query all related items in a partition rather scanning the whole table. 
