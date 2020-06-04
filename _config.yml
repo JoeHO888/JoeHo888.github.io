@@ -40,7 +40,7 @@ paginate: 2 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
 twitter:
-  username: ChoTaiHO1 # jekyll-seo-tag > Owners twitter username
+  username: JoeHo31326982 # jekyll-seo-tag > Owners twitter username
 facebook:
   username: joe.ho.716 # jekyll-seo-tag > Owners twitter username
 author: Joe HO # jekyll-seo-tag > default author
@@ -51,6 +51,7 @@ social: # jekyll-seo-tag > social overrides
     - https://github.com/JoeHo888
     - https://medium.com/@joeho_15265
     - https://JoeHo888.github.io
+    - https://twitter.com/JoeHo31326982
 # markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
 # commonmark:
   # options: ["SMART", "FOOTNOTES"]
@@ -124,6 +125,7 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
   GitHub: https://github.com/JoeHo888
   Medium: https://medium.com/@joeho_15265
   link: https://JoeHo888.github.io
+  Twitter: https://twitter.com/JoeHo31326982
   
 
 sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
