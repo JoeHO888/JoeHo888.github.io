@@ -22,8 +22,37 @@ In SharePoint Online, we sometimes need to restrict/edit permission for each lis
 Power Automate is used for sake of authentication simplicity, you need to use an access token to invoke SharePoint API in general.
 
 More on Authentication:
-1. https://medium.com/@anoopt/access-sharepoint-data-using-postman-eec5965400f2
-2.https://medium.com/@anoopt/accessing-sharepoint-data-using-postman-sharepoint-rest-api-76b70630bcbf
+1. [https://medium.com/@anoopt/access-sharepoint-data-using-postman-eec5965400f2](https://medium.com/@anoopt/access-sharepoint-data-using-postman-eec5965400f2)
+2. [https://medium.com/@anoopt/accessing-sharepoint-data-using-postman-sharepoint-rest-api-76b70630bcbf](https://medium.com/@anoopt/accessing-sharepoint-data-using-postman-sharepoint-rest-api-76b70630bcbf)
+
+## Steps
+
+### Outline
+1. By default, a list item inherits the permission from the list, so
+We will break the inheritance of the list item first
+2. We will erase all permissions settings of the list item [Optional]
+3. We will grant permission to other users/groups
+
+Remark: 
+1. We can complete 1 & 2 with a single API call
+2. We will demonstrate how to grant permission to users and groups.
+
+### Break Inheritance
+A single API call will do the job.
+```
+POST <Site URL>/_api/web/lists/getByTitle('<List Name>')/items(<Item ID>)/breakroleinheritance(copyRoleAssignments=<CopyPermissionFromParent>, clearSubscopes=true)
+* Site URL: The SharePoint site which your list belongs to
+* List Name: The SharePoint list which your list item belongs to
+* Item ID: The SharePoint item ID
+* CopyPermissionFromParent (true or false): Whether to copy the list permission. If it is false, this API call will erase all permissions and grant "Full Control" permission to your account (A minor drawback)
+```
+{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/api-call.png" caption="Make API Call" %}
+
+{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/before-break-inheritance.png" caption="Before Break Inheritance" %}
+
+{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/after-break-inheritance.png" caption="After Break Inheritance" %}
+
+
 
 
 This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4](https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4)
