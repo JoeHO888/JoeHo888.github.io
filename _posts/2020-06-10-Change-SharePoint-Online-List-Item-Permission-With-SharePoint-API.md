@@ -46,13 +46,11 @@ POST <Site URL>/_api/web/lists/getByTitle('<List Name>')/items(<Item ID>)/breakr
 * Item ID: The SharePoint item ID
 * CopyPermissionFromParent (true or false): Whether to copy the list permission. If it is false, this API call will erase all permissions and grant "Full Control" permission to your account (A minor drawback)
 ```
-{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/api-call.png" caption="Make API Call" %}
+{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/api-call.jpg" caption="Make API Call" %}
 
-{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/before-break-inheritance.png" caption="Before Break Inheritance" %}
+{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/before-break-inheritance.jpg" caption="Before Break Inheritance" %}
 
-{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/after-break-inheritance.png" caption="After Break Inheritance" %}
-
-
+{% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/after-break-inheritance.jpg" caption="After Break Inheritance" %}
 
 
 This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4](https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4)
