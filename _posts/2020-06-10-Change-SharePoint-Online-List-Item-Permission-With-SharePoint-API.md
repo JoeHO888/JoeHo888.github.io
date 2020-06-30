@@ -50,6 +50,17 @@ POST <Site URL>/_api/web/lists/getByTitle('<List Name>')/items(<Item ID>)/breakr
 
 {% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/after-break-inheritance.jpg" caption="After Break Inheritance" %}
 
+### Grant Permission to User/Group
+We need to gather two piece of information, User/Group ID and Permission ID, then we can call a API with IDs to grant user/group permission.
+
+#### Gather User/Group ID and Permission ID
+To retrieve user/group ID, you can call with the email of the user or the name of the group
+
+```
+POST <Site URL>/_api/web/SiteUsers/getByEmail('<User Email/Group Name>')
+* Site URL: The SharePoint site which your list belongs to
+* User Email/Group Name: User Email/Group Name
+```
 
 This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4](https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4)
 
