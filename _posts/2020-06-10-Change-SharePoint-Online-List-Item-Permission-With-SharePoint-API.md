@@ -33,9 +33,7 @@ We will break the inheritance of the list item first
 2. We will erase all permissions settings of the list item [Optional]
 3. We will grant permission to other users/groups
 
-Remark: 
-1. We can complete 1 & 2 with a single API call
-2. We will demonstrate how to grant permission to users and groups.
+Remark: We can complete 1 & 2 with a single API call
 
 ### Break Inheritance
 A single API call will do the job.
