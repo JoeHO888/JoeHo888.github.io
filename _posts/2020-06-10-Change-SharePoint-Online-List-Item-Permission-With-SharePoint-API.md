@@ -54,7 +54,7 @@ POST <Site URL>/_api/web/lists/getByTitle('<List Name>')/items(<Item ID>)/breakr
 We need to gather two piece of information, User/Group ID and Permission ID, then we can call a API with IDs to grant user/group permission.
 
 #### Gather User/Group ID and Permission ID
-To retrieve user/group ID, you can call below API with the email of the user or the name of the group
+To retrieve user/group ID, you can call below API with user email or group name.
 
 ```
 POST <Site URL>/_api/web/SiteUsers/getByEmail('<User Email/Group Name>')
@@ -62,6 +62,12 @@ POST <Site URL>/_api/web/SiteUsers/getByEmail('<User Email/Group Name>')
 * User Email/Group Name: User Email/Group Name
 ```
 
+To retrieve Permission ID, you can call below API with permission name.
+```
+POST <Site URL>/_api/web/roledefinitions/getbyname('<Permission Name>')/id
+* Site URL: The SharePoint site which your list belongs to
+* Permission Name: Permission name
+```
 
 
 This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4](https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4)
