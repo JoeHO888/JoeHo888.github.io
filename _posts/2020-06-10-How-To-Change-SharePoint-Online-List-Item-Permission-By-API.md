@@ -1,5 +1,5 @@
 ---
-title: Change SharePoint Online List Item Permission With SharePoint API
+title: How to change SharePoint Online List Item Permission by API
 categories:
 - SharePoint
 - Office 365
