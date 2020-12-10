@@ -23,14 +23,14 @@ There are two approaches to achieve that.
 2. String Interpolation in Azure Data Factory 
 
 ### Azure Data Factory’s built-in function “concat” 
-Azure Data Factory has a built-in function “concat” which helps us concatentae string together, but this makes the dynamic content less readable. 
+Azure Data Factory has a built-in function “concat” which helps us concatenate  string together, but this makes the dynamic content less readable. 
 
 {% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/concat-function-example.jpg" caption="Use built-in concat function"%}
 
 {% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/output.jpg" caption="Output"%}
 
 ### String Interpolation in Azure Data Factory 
-Actually, we can do string interpolation in Azure Data Factory, which is similar to other programming languages, this approache can make our dynamic content much more to comprehend. 
+Actually, we can do string interpolation in Azure Data Factory, which is similar to other programming languages, this approach can make our dynamic content much more to comprehend. 
 
 To achieve string interpolation, please put your variable inside “@{}”, i.e. @{your_variable_expression}. For example, it should be “@{variables(‘variable_name’)}” if your variable name is “variable_name”.
 
@@ -39,7 +39,7 @@ To achieve string interpolation, please put your variable inside “@{}”, i.e.
 {% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/output.jpg" caption="Output"%}
 
 #### Bonus: Call functions with String Interpolation
-On top of that, String Interpolation allows you to call other other Azure Data Factory built-in functions inside the expression. 
+On top of that, String Interpolation allows you to call other Azure Data Factory built-in functions inside the expression. 
 
 {% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/bonus-example.jpg" caption="Call functions with String Interpolation"%}
 
