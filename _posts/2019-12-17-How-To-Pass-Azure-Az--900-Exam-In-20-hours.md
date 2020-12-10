@@ -92,7 +92,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
         Browse to the <a href="https://www.microsoft.com/en-us/learning/dashboard.aspx">dashboard</a> and login
     </div>
     <div>
-        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step1.jpg" alt="Microsoft Certification Dashboard">
+        <img src="https://joeho888.github.io/images/2019-12-17-How-To-Pass-Azure-Az--900-Exam-In-20-hours/step1.jpg" alt="Microsoft Certification Dashboard">
     </div>	
   </li>
   <li>
@@ -100,7 +100,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
         Choose the badge you want to share
     </div>
     <div>
-        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step2.jpg" alt="Certification Badge">
+        <img src="https://joeho888.github.io/images/2019-12-17-How-To-Pass-Azure-Az--900-Exam-In-20-hours/step2.jpg" alt="Certification Badge">
     </div>	
   </li>
   <li>
@@ -108,7 +108,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
         Click "Share"
     </div>
     <div>
-        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step3.jpg" alt="Certification Badge">
+        <img src="https://joeho888.github.io/images/2019-12-17-How-To-Pass-Azure-Az--900-Exam-In-20-hours/step3.jpg" alt="Certification Badge">
     </div>	
   </li>  
   <li>
@@ -121,7 +121,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
         Choose the badge in Accliam Dashboard
     </div>
     <div>
-        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step5.jpg" alt="Accliam Dashboard">
+        <img src="https://joeho888.github.io/images/2019-12-17-How-To-Pass-Azure-Az--900-Exam-In-20-hours/step5.jpg" alt="Accliam Dashboard">
     </div>	
   </li>  
   <li>
@@ -129,7 +129,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
         Click "Public badge view"
     </div>
     <div>
-        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step6.jpg" alt="Settings of Badge in Accliam Dashboard">
+        <img src="https://joeho888.github.io/images/2019-12-17-How-To-Pass-Azure-Az--900-Exam-In-20-hours/step6.jpg" alt="Settings of Badge in Accliam Dashboard">
     </div>	
   </li>    
   <li>
@@ -137,7 +137,7 @@ If you pass the AZ-900 Exam, you can view your certification on dashboard and sh
         You can put the link of that badge in LinkedIn or share with someone else.
     </div>
     <div>
-        <img src="https://joeho888.github.io/images/2019-12-17-20-Hours-To-Pass-Azure-AZ-900/step7.jpg" alt="URL of Public View of Badge">
+        <img src="https://joeho888.github.io/images/2019-12-17-How-To-Pass-Azure-Az--900-Exam-In-20-hours/step7.jpg" alt="URL of Public View of Badge">
     </div>	
   </li>      
 </ol>
