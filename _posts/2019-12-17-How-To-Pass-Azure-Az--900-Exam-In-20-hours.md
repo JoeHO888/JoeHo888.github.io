@@ -1,5 +1,5 @@
 ---
-title: 20 Hours To Pass Azure Exam AZ-900
+title: How to pass Azure AZ-900 exam in 20 hours
 categories:
 - Azure Exam
 excerpt: |
