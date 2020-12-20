@@ -1,50 +1,80 @@
 ---
-title: How to do string interpolation in Azure Data Factory
+title: How to store secrets in Azure Databricks
 categories:
 - Azure
-- Azure Data Factory
+- Azure Databricks
 excerpt: |
-  Inserting your variables into String in Azure Data Factory may be annoying, this guide discuss how to make it easily with string interpolation.
+  We often need to use secrets to access other services in Azure Databricks, but how can we protect these secrets?
 feature_text: |
-  ## How to put your variables insider String Expression in Azure Data Factory
+  ## Secret Management in Azure Databricks
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
 ---
 
 ## Background
-Azure Data Factory allows us to add dynamic content in certain fields. Sometimes, we want to insert the value of variables, value of function or output of last activity into our string for dynamic content.
+In Azure Databricks, we can write code to perform data transformation on data stored in various Azure Services, e.g. Azure Blob Storage, Azure Synapse. However, as other programs, sometimes, you want to protect credentials used in Azure Databricks, Azure Databricks provides a solid secret management approach to help you achieve that.
 
-{% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/background-image.jpg" %}
+## Steps
 
-## Solution
-There are two approaches to achieve that. 
+### Prepare Databricks command-line interface (CLI) in Azure Cloud Shell
 
-1. Azure Data Factory’s built-in function “concat” 
-2. String Interpolation in Azure Data Factory 
+#### Configure your cloud shell environment
 
-### Azure Data Factory’s built-in function “concat” 
-Azure Data Factory has a built-in function “concat” which helps us concatenate  string together, but this makes the dynamic content less readable. 
+Open Cloud Shell & make sure you select “Bash” for the Cloud Shell Environment.
 
-{% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/concat-function-example.jpg" caption="Use built-in concat function"%}
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/bash-cloud-shell.jpg" %}
 
-{% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/output.jpg" caption="Output"%}
+#### Set up Virtual Environment
+Create Virtual Environment with below command.
 
-### String Interpolation in Azure Data Factory 
-Actually, we can do string interpolation in Azure Data Factory, which is similar to other programming languages, this approach can make our dynamic content much more to comprehend. 
+```
+# Bash
+virtualenv -p /usr/bin/python2.7 databrickscli
+```
 
-To achieve string interpolation, please put your variable inside “@{}”, i.e. @{your_variable_expression}. For example, it should be “@{variables(‘variable_name’)}” if your variable name is “variable_name”.
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/create-virtual-environment.jpg" %}
 
-{% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/string-interpolation-example.jpg" caption="Use String Interpolation"%}
+#### Activate your virtual environment
 
-{% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/output.jpg" caption="Output"%}
+Activate your virtual environment with below command.
 
-#### Bonus: Call functions with String Interpolation
-On top of that, String Interpolation allows you to call other Azure Data Factory built-in functions inside the expression. 
+```
+# Bash
+source databrickscli/bin/activate
+```
 
-{% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/bonus-example.jpg" caption="Call functions with String Interpolation"%}
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/activate-virtual-environment.jpg" %}
 
-{% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/bonus-output.jpg" caption="Output"%}
+#### Install Databricks CLI
+Install Databricks CLI with below command.
 
-Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
+```
+# Bash
+pip install databricks-cli
+```
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/install-databricks-cli.jpg" %}
+
+### Create secret in Azure Databricks
+
+#### Set up authentication
+Before you can create a secret, you need to authenticate as a user of the Azure Databricks, which requires your Azure Databrics workspace’s URL and a token
+
+##### Get your Azure Databricks workspace’s URL
+You can navigate to your Azure Databricks workspace and copy its URL.
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/databricks-url.jpg" %}
+
+##### Generate Access Token for your Azure Databricks workspace
+You can follow below steps to retrieve access token
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/launch-databricks-workspace.jpg" caption="Launch Databricks Workspace"%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/databricks-user-settings.jpg" caption="Click 'User Settings'"%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/generate-access-token.jpg" caption="Click 'Generate New Token' "%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/configure-access-token.jpg" caption="Configure access token & click "Generate""%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/copy-access-token.jpg" caption="Copy access token"%}
+
