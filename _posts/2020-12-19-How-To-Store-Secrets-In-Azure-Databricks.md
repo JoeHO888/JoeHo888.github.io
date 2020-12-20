@@ -71,3 +71,9 @@ You can follow below steps to retrieve access token
 {% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/launch-databricks-workspace.jpg" caption="Launch Databricks Workspace"%}
 
 {% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/databricks-user-settings.jpg" caption="Click 'User Settings'"%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/generate-access-token.jpg" caption="Click 'Generate New Token' "%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/configure-access-token.jpg" caption="Configure access token & click "Generate""%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/copy-access-token.jpg" caption="Copy access token"%}
