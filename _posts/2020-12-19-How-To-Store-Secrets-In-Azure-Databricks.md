@@ -1,5 +1,5 @@
 ---
-title: How to store secrets in Azure Databricks?
+title: How to store secrets in Azure Databricks
 categories:
 - Azure
 - Azure Databricks
