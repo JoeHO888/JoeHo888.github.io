@@ -64,3 +64,10 @@ Before you can create a secret, you need to authenticate as a user of the Azure 
 You can navigate to your Azure Databricks workspace and copy its URL.
 
 {% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/databricks-url.jpg" %}
+
+##### Generate Access Token for your Azure Databricks workspace
+You can follow below steps to retrieve access token
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/launch-databricks-workspace.jpg" caption="Launch Databricks Workspace"%}
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/databricks-user-settings.jpg" caption="Click 'User Settings'"%}
