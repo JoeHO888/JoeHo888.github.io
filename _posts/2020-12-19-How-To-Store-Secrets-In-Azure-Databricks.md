@@ -56,3 +56,11 @@ pip install databricks-cli
 {% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/install-databricks-cli.jpg" %}
 
 ### Create secret in Azure Databricks
+
+#### Set up authentication
+Before you can create a secret, you need to authenticate as a user of the Azure Databricks, which requires your Azure Databrics workspace’s URL and a token
+
+##### Get your Azure Databricks workspace’s URL
+You can navigate to your Azure Databricks workspace and copy its URL.
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/databricks-url.jpg" %}
