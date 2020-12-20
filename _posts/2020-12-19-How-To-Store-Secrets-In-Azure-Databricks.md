@@ -24,4 +24,23 @@ Open Cloud Shell & make sure you select “Bash” for the Cloud Shell Environme
 
 {% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/bash-cloud-shell.jpg" %}
 
+#### Set up Virtual Environment
+Create Virtual Environment with below command.
 
+```
+# Bash
+virtualenv -p /usr/bin/python2.7 databrickscli
+```
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/create-virtual-environment.jpg" %}
+
+#### Activate your virtual environment
+
+Activate your virtual environment with below command.
+
+```
+# Bash
+source databrickscli/bin/activate
+```
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/activate-virtual-environment.jpg" %}
