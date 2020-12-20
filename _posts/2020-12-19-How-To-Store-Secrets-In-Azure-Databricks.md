@@ -44,3 +44,15 @@ source databrickscli/bin/activate
 ```
 
 {% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/activate-virtual-environment.jpg" %}
+
+#### Install Databricks CLI
+Install Databricks CLI with below command.
+
+```
+# Bash
+pip install databricks-cli
+```
+
+{% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/install-databricks-cli.jpg" %}
+
+### Create secret in Azure Databricks
