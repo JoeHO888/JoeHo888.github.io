@@ -78,8 +78,6 @@ Usually, composite key is adopted when your table contain some sort of one-to-ma
 If your table is small, using partition key solely as the primary key is good enough, because you don't need to spend extra efforts to worry about sort key.
 However, it is better to use sort key in your table if you table grows, it can help you extend the capability of DynamoDB query and lower your cost.
 
-This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4](https://medium.com/@joeho_15265/20-hours-to-pass-azure-exam-az-900-b8afe5383ce4)
-
 Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
 
 LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
