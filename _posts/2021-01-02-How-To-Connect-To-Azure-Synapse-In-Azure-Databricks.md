@@ -5,9 +5,9 @@ categories:
 - Azure Databricks
 - Azure Synapse
 excerpt: |
-  We often need to use secrets to access other services in Azure Databricks, but how can we protect these secrets?
+  Azure Databricks can connect to various types of Azure Data Sources, one of them is Azure Synapse, but how to connect to it?
 feature_text: |
-  ## Secret Management in Azure Databricks
+  ## Connect to Azure Synapse in Azure Databricks
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
 ---
