@@ -45,6 +45,8 @@ On top of that, String Interpolation allows you to call other Azure Data Factory
 
 {% include figure.html image="/images/2020-12-05-How-To-Do-String-Interpolation-Azure-Data-Factory/bonus-output.jpg" alt="Output — String Interpolation inside other functions" caption="Output — String Interpolation inside other functions"%}
 
+Medium Post: [https://joeho-15265.medium.com/how-to-do-string-interpolation-in-azure-data-factory-8d2f56e192ee](https://joeho-15265.medium.com/how-to-do-string-interpolation-in-azure-data-factory-8d2f56e192ee)
+
 Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
 
 LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
