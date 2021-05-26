@@ -1,10 +1,10 @@
 ---
-title: Joe Ho Blog
+title: About Me
 layout: page
 aside: true
 feature_text: |
   ## Joe Ho Blog
-  Microsoft related Visualization, Data Management, Big Data, Streaming Tool, including Power BI, Azure Data Warehouse, Azure Databricks, Azure Data Lake Gen 2.
+  Microsoft related Business Intelligence, Data Analytics and Data Engineering
 feature_image: "https://picsum.photos/1300/400?image=989"
 excerpt: "Joe Ho Blog On Data Analytics & Data Engineering"
 ---
