@@ -85,10 +85,10 @@ defaults:
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
 lang: en-US # Set the site language
-title: "Joe Ho Blog" # Site name or title, also used in jekyll-seo-tag
+title: "Joe Ho Blog On Data Analytics & Data Engineering" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
-description: "A Blog about Information Technology and Computer Science"
-url: "https://JoeHo888.github.io" # Site url, also used in jekyll-seo-tag
+description: "Microsoft related Visualization, Data Management, Big Data, Streaming Tool, including Power BI, Azure Data Warehouse, Azure Databricks, Azure Data Lake Gen 2."
+url: "https://joeho.xyz" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/JoeHo888/JoeHo888.github.io"
 email: "joe.hochotai@gmail.com"

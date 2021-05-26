@@ -4,9 +4,9 @@ layout: page
 aside: true
 feature_text: |
   ## Joe Ho Blog
-  A Blog about Information Technology and Computer Science
+  Microsoft related Visualization, Data Management, Big Data, Streaming Tool, including Power BI, Azure Data Warehouse, Azure Databricks, Azure Data Lake Gen 2.
 feature_image: "https://picsum.photos/1300/400?image=989"
-excerpt: "Information Technology and Computer Science Blog"
+excerpt: "Joe Ho Blog On Data Analytics & Data Engineering"
 ---
 
 Hello,
