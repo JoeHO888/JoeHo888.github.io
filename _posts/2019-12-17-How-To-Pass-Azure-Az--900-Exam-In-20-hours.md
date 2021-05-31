@@ -146,4 +146,4 @@ This post is also publised in Medium, [https://medium.com/@joeho_15265/20-hours-
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
+LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a](https://www.linkedin.com/in/ho-cho-tai-0260758a)

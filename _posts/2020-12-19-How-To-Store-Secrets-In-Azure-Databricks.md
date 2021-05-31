@@ -122,6 +122,6 @@ Example: dbutils.secrets.get(scope=storage,key=blob)
 
 {% include figure.html image="/images/2020-12-19-How-To-Store-Secrets-In-Azure-Databricks/notebook-demo.jpg" caption="Demo"%}
 
-Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
+Blog: [https://joeho.xyz](https://joeho.xyz)
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
+LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a](https://www.linkedin.com/in/ho-cho-tai-0260758a)
