@@ -17,7 +17,7 @@ I attempted to crack their CAPTCHAs on Geetest website with several techniques, 
 
 Project URL: 
 
-[https://joeho888.github.io/projects/Attempt-to-solve-Geetest-CAPTCHA/](/projects/Attempt-to-solve-Geetest-CAPTCHA/)
+[https://joeho.xyz/projects/Attempt-to-solve-Geetest-CAPTCHA/](/projects/Attempt-to-solve-Geetest-CAPTCHA/)
 
 Source Code: 
 
@@ -30,7 +30,7 @@ Our Platform serves as a middleman to bring car parking service provider and cus
 
 Project URL: 
 
-[https://joeho888.github.io/projects/Online-Car-Parking-Platform-BinLuIS/](/projects/Online-Car-Parking-Platform-BinLuIS/)
+[https://joeho.xyz/projects/Online-Car-Parking-Platform-BinLuIS/](/projects/Online-Car-Parking-Platform-BinLuIS/)
 
 Source Code: 
 1. [BinLuIS Backend](https://github.com/BinLuIS/ParkingSystemManagementConsole)
