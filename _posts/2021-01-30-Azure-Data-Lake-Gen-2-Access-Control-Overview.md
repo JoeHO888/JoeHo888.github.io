@@ -146,6 +146,6 @@ Choose the file you want to set permission and click "Manage ACLs"
 Set "Access ACL" for that file
 {% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/configure-file-access-control-lists.png" alt="Configure 'Access ACL' of a file" %}
 
-Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
+Blog: [https://joeho.xyz](https://joeho.xyz)
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
+LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a](https://www.linkedin.com/in/ho-cho-tai-0260758a)

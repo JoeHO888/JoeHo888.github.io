@@ -69,6 +69,6 @@ POST <Site URL>/_api/web/roledefinitions/getbyname('<Permission Name>')/id
 * Permission Name: Permission name
 ```
 
-Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
+Blog: [https://joeho.xyz](https://joeho.xyz)
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
+LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a](https://www.linkedin.com/in/ho-cho-tai-0260758a)
