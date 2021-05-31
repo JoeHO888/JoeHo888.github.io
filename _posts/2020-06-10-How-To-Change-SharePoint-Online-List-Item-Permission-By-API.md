@@ -71,4 +71,4 @@ POST <Site URL>/_api/web/roledefinitions/getbyname('<Permission Name>')/id
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a](https://www.linkedin.com/in/ho-cho-tai-0260758a)
+LinkedIn: [https://www.linkedin.com/in/joe-ho-0260758a](https://www.linkedin.com/in/joe-ho-0260758a)

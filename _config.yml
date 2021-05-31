@@ -47,7 +47,7 @@ author: Joe HO # jekyll-seo-tag > default author
 social: # jekyll-seo-tag > social overrides
   name: Joe HO # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
-    - https://www.linkedin.com/in/ho-cho-tai-0260758a
+    - https://www.linkedin.com/in/joe-ho-0260758a
     - https://github.com/JoeHo888
     - https://medium.com/@joeho_15265
     - https://joeho.xyz
@@ -121,7 +121,7 @@ navigation_footer:
   Joe Ho Blog: https://joeho.xyz
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  LinkedIn: https://www.linkedin.com/in/ho-cho-tai-0260758a
+  LinkedIn: https://www.linkedin.com/in/joe-ho-0260758a
   GitHub: https://github.com/JoeHo888
   Medium: https://medium.com/@joeho_15265
   link: https://joeho.xyz
