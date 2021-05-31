@@ -112,10 +112,10 @@ As mentioned above, staging folder is needed to store some temporary data whenev
 {% include figure.html image="/images/2021-01-02-How-To-Connect-To-Azure-Synapse-In-Azure-Databricks/data-in-temporary-storage.jpg" alt="Data in temporary storage" %}
 
 ### Another Bonus: Secret Management in Azure Databricks
-The code above put our secrets, e.g. user credentials, storage key in pain text. Actually, we should hide them in the notebooks. You can refer to this [guide](https://joeho888.github.io/azure/azure%20databricks/2020/12/19/How-To-Store-Secrets-In-Azure-Databricks/) for more detail.
+The code above put our secrets, e.g. user credentials, storage key in pain text. Actually, we should hide them in the notebooks. You can refer to this [guide](/azure/azure%20databricks/2020/12/19/How-To-Store-Secrets-In-Azure-Databricks/) for more detail.
 
 {% include figure.html image="/images/2021-01-02-How-To-Connect-To-Azure-Synapse-In-Azure-Databricks/use-databricks-secret.jpg" caption ="Retrieve storage key from databricks secret" alt="Use databricks secret" %}
 
-Blog: [https://joeho888.github.io/](https://joeho888.github.io/)
+Blog: [https://joeho.xyz](https://joeho.xyz)
 
 LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a/](https://www.linkedin.com/in/ho-cho-tai-0260758a/)
