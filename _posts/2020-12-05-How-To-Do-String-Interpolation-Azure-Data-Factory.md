@@ -49,4 +49,4 @@ Medium Post: [https://joeho-15265.medium.com/how-to-do-string-interpolation-in-a
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a](https://www.linkedin.com/in/ho-cho-tai-0260758a)
+LinkedIn: [https://www.linkedin.com/in/joe-ho-0260758a](https://www.linkedin.com/in/joe-ho-0260758a)

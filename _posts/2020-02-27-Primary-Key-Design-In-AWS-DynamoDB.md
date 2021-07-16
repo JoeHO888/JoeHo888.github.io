@@ -80,4 +80,4 @@ However, it is better to use sort key in your table if you table grows, it can h
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
 
-LinkedIn: [https://www.linkedin.com/in/ho-cho-tai-0260758a](https://www.linkedin.com/in/ho-cho-tai-0260758a)
+LinkedIn: [https://www.linkedin.com/in/joe-ho-0260758a](https://www.linkedin.com/in/joe-ho-0260758a)
