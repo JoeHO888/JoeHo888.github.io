@@ -109,6 +109,148 @@ players_basic_information_links  = [
 ]
 ```
 There are numerous ways to query the HTML code with BeautifulSoup. Here, we locate the salary table by "table tag" & its classes, then extract all links inside it.
+{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/extract-links-inside-table.png" alt="Extract links inside table" caption="Extract links inside table"%}
+
+### Extract basic information
+After getting the link to each player's basic information page, we will extract the basic information for each user. Most of those pieces of information are text and non-clickable, we need to locate its element by highlighting them and right clicking as below.
+{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/inspect-stephen-curry-basic-information.png" alt="'Inspect' Stephen Curry Basic Information" caption="'Inspect' Stephen Curry Basic Information"%}
+
+Once again, you can use BeautifulSoup to extract the elements of those pieces of information by performing certain queries.
+``` python
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+basic_information_page_link "https://hoopshype.com/player/stephen-curry/salary/"
+driver.get(basic_information_page_link ) # Navigate to basic information page
+basic_information_html = driver.page_source # Get the source code
+soup = BeautifulSoup(basic_information_html, 'html.parser') # Represent the source code & Allow us to do searching
+
+# Extract Information
+player_name = soup.find("div", {"class": "player-fullname"}).text.strip() # Get Name
+player_jersey = soup.find("div", {"class": "player-jersey"}).text.strip() # Get Jersey
+player_team = soup.find("div", {"class": "player-team"}).text.strip() # Get Team
+
+# Get all elements with player-bio-text-line-value
+# Match each element to corresponding biography information
+bio_text_values = soup.find_all("span", {"class": "player-bio-text-line-value"})
+player_position = bio_text_values[0].text.strip()
+player_birthdate = bio_text_values[1].text.strip()
+player_height = bio_text_values[2].text.strip()
+player_weight = bio_text_values[3].text.strip()
+player_salary = bio_text_values[4].text.strip()
+
+
+print(player_name + "\n" + 
+      player_jersey + "\n" + 
+      player_team + "\n" + 
+      player_position + "\n" + 
+      player_birthdate + "\n" + 
+      player_height + "\n" + 
+      player_weight + "\n" + 
+      player_salary)
+```
+Unfortunately, there is no way to identify position, birth date, height, weight and salary, as all of them share common attributes. Therefore, we get all relevant elements and match them one by one.
+The output should look like this
+```
+Stephen Curry
+#30
+Golden State Warriors
+G
+03/14/88
+6-3 / 1.91
+185 lbs. / 83.9 kg.
+$45,780,966
+```
+
+### Repeat the steps for each player
+After being able to extract the information from a player, we just need to repeat the whole process for each player and store the information
+``` python
+from bs4 import BeautifulSoup
+from selenium import webdriver
+import time
+
+driver = webdriver.Chrome() # Launch Chrome browser
+
+driver.get("https://hoopshype.com/salaries/players") # Navigate to our main page
+...
+players_basic_information_links  = [
+    a_tag_element.get("href") 
+    for a_tag_element in salary_table.findChildren("a" , recursive=True)
+]
+
+# Initiate arrays to store information
+all_players_info = []
+
+
+# Looping over all basic information page links
+# for basic_information_page_link in players_basic_information_links:
+
+#  We won't loop over all basic links in this example.
+# Otherwise, we may consume too many resources from this website
+for basic_information_page_link in players_basic_information_links[:2]:
+	  driver.get(basic_information_page_link ) # Navigate to basic information page
+		...
+
+		# Extract Information
+		player_name = soup.find("div", {"class": "player-fullname"}).text.strip() # Get Name
+		player_jersey = soup.find("div", {"class": "player-jersey"}).text.strip() # Get Jersey
+		...
+
+		# Store information
+		all_players_info.append([
+        player_name, 
+				player_jersey, 
+				player_team, 
+				player_position, 
+				player_birthdate, 
+				player_height, 
+				player_weight, 
+				player_salary
+    ])
+		# Pause 5 seconds before we get information for another player
+		# Otherwise, we increase the load for their server significantly
+		time.sleep(5)
+```
+
+### Export result to a csv file
+We convert the data to a table-like format
+``` python
+import pandas as pd
+
+...
+
+# Create a dataframe, you may treat it as a table
+df = pd.DataFrame(all_players_info, 
+                  columns =[
+                      "Name", 
+                      "Jersey", 
+                      "Team", 
+                      "Position", 
+                      "Birthdate", 
+                      "Height", 
+                      "Weight", 
+                      "Salary"
+                  ]
+                 )
+print(df)
+```
+You should see a table as below.
+{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-information-pandas-table.png" alt="NBA players Information Pandas Table" caption="NBA players Information Pandas Table"%}
+Finally, we export the information as a csv file
+``` python
+import pandas as pd
+
+...
+
+df.to_csv(".\players.csv",index=False)
+```
+
+
+
+## Conclusion
+The above tutorial outlines how to scrape data from web pages with just three python modules. In fact, anyone who has basic knowledge of Python & HTML can learn web scraping quickly given that there are lots of mature tools. In other words, anybody can steal your web content easily if you have zero protection on your web content. Therefore, it becomes crucial to protect your content by adopting Cyber Security technologies.
+
+These technologies can monitor your websites' traffic, verify the authenticity of incoming traffic & block the incoming traffic. For example, [Geetest's BotSonar](https://www.geetest.com/BotSonar), which is adopted by multinational companies, e.g. KFC & Nike, that technology monitors your website 24/7 and distinguishes the traffic between bad bots and human beings by their AI technology. On top of that, you can choose how do you handle those bad incoming traffic, e.g. blocking the bad incoming traffic or showing fake content to them. Besides, Geetest respects your data privacy, their products are GDPR compliant, which is a plus if you are from enterprise background.
 
 
 
