@@ -10,6 +10,15 @@ In the past, I thought I mastered some new technologies, knowledge after watchin
 
 Below are projects I have worked on and well-documented.
 
+#### Web Scraping with Selenium
+A project sponsored by [Geetest](https://www.geetest.com/en/). It illustrates how to scrape NBA players' basic information with Selenium, it only requires some basic knowledge of Python & HTML
+
+Project URL: 
+[https://joeho.xyz/projects/Web-Scraping-with-selenium/](/projects/Web-Scraping-with-selenium/)
+
+Source Code: 
+[https://github.com/JoeHO888/How-does-web-scraping-become-simpler-and-how-to-prevent-it/blob/main/How%20does%20web%20scraping%20become%20simpler%20and%20how%20to%20prevent%20it%20-%20Source%20Code.ipynb](https://github.com/JoeHO888/How-does-web-scraping-become-simpler-and-how-to-prevent-it/blob/main/How%20does%20web%20scraping%20become%20simpler%20and%20how%20to%20prevent%20it%20-%20Source%20Code.ipynb)
+
 #### Attempt To Solve Geetest CAPTCHA
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) is widely adopted in various websites to protect them against bots. Geetest is a China company specializing in CAPTCHA Research and Development, it serves numerous multinational corporations, e.g Nike, Xiaomi. 
 

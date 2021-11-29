@@ -1,8 +1,5 @@
 ---
 title: Web Scraping With Selenium
-categories:
-- Scraping
-- Selenium
 excerpt: |
   Simple example to scrape NBA player's salary
 feature_text: |
@@ -10,6 +7,8 @@ feature_text: |
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
 ---
+
+_Project_ _sponsored_ _by_ [Geetest](https://www.geetest.com/en/)
 
 ## Introduction
 Web scraping refers to extracting the content of a website programmatically. Specifically, developers create bots to get the HTML code of a website, parse the code and export the result to an external data source.
@@ -24,9 +23,9 @@ Here's the main page of NBA players' basic information: [https://hoopshype.com/s
 
 We can navigate to another web page that contains each player's basic information from this page.
 
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-information-overview.png" alt="NBA Players Information Overview" caption="NBA Players Information Overview"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/nba-players-information-overview.png" alt="NBA Players Information Overview" caption="NBA Players Information Overview"%}
 
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/stephen-curry-basic-information.png" alt="Stephen Curry's basic information" caption="Stephen Curry's basic information"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/stephen-curry-basic-information.png" alt="Stephen Curry's basic information" caption="Stephen Curry's basic information"%}
 
 
 ### Prerequisite
@@ -45,13 +44,13 @@ To let Selenium module functions, we need to install Selenium driver. The driver
 We will illustrate the installation steps for Windows,  you may refer to [https://selenium-python.readthedocs.io/installation.html#drivers](https://selenium-python.readthedocs.io/installation.html#drivers) for more detail.
 
 Download the zip file containing the chromedriver.exe
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/selenium-driver-zip-file.png" alt="Selenium Drive zip file" caption="Selenium Drive zip file"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/selenium-driver-zip-file.png" alt="Selenium Drive zip file" caption="Selenium Drive zip file"%}
 Unzip the folder. Optionally, you can move the folder to another directory
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/selenium-driver-exe.png" alt="Selenium Drive Executable file" caption="Selenium Drive Executable file"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/selenium-driver-exe.png" alt="Selenium Drive Executable file" caption="Selenium Drive Executable file"%}
 Type "Environment Variables" in start menu & select "Edit the system environment variables"
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/search-environment-variables.png" alt="Search Environment Variables" caption="Search Environment Variables"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/search-environment-variables.png" alt="Search Environment Variables" caption="Search Environment Variables"%}
 Update "PATH" variable to include the folder path which contains the driver program
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/update-path-environment-variable.png" alt="Update 'Path' Environment Variable" caption="Update 'Path' Environment Variable"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/update-path-environment-variable.png" alt="Update 'Path' Environment Variable" caption="Update 'Path' Environment Variable"%}
 
 ### Get HTML code of the website
 First of all, let us try to use Selenium to launch a new browser & get the source code of NBA players' salary data source.
@@ -65,7 +64,7 @@ html = driver.page_source # Get the source code
 print(html)
 ```
 You should get the HTML code as below.
-``` HTML
+``` html
 <html lang="en-US" class="js">
 	...
 	<head>
@@ -78,16 +77,19 @@ You should get the HTML code as below.
 </html>
 ```
 On the other hand, you should see a new browser is launched. 
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/browser-launche-by-selenium.png" alt="Browser launched by Selenium" caption="Browser launched by Selenium"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/browser-launch-by-selenium.png" alt="Browser launched by Selenium" caption="Browser launched by Selenium"%}
 
 ### Navigate to NBA player's basic information page
 In order to get each player's basic information, we need to navigate to the corresponding page & extract the data. The links of these pages are already in a table of the main page.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-basic-informaion-link.png" alt="NBA players basic information link" caption="NBA players basic information link"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/nba-players-basic-informaion-link.png" alt="NBA players basic information link" caption="NBA players basic information link"%}
 To get the links in this table, we can find the corresponding HTML elements. We can use the below method to find the HTML element of those links of NBA players' basic information page.
-1. Right click one of the links. {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/right-click-a-nba-player-basic-information-link.png" alt="Right Click a NBA player's basic information link" caption="Right Click a NBA player's basic information link"%}
-2. Select "Inspect". {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/inspect-a-nba-player-basic-information-link-html-element.png" alt="Inspect a NBA player basic information link HTML element" caption="Inspect a NBA player basic information link HTML element"%}
-3. Developer tool should appear & the corresponding HTML element should be highlighted. {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-player-link-html-element.png" alt="NBA player link HTML element" caption="NBA player link HTML element"%}
-4. HTML elements for other players are similar to this one.
+Right click one of the links.
+{% include figure.html image="/images/Web-Scraping-with-selenium/right-click-a-nba-player-basic-information-link.png" alt="Right Click a NBA player's basic information link" caption="Right Click a NBA player's basic information link"%}
+Select "Inspect".
+{% include figure.html image="/images/Web-Scraping-with-selenium/inspect-a-nba-player-basic-information-link-html-element.png" alt="Inspect a NBA player basic information link HTML element" caption="Inspect a NBA player basic information link HTML element"%}
+Developer tool should appear & the corresponding HTML element should be highlighted.
+{% include figure.html image="/images/Web-Scraping-with-selenium/nba-player-link-html-element.png" alt="NBA player link HTML element" caption="NBA player link HTML element"%}
+HTML elements for other players are similar to this one.
 
 Next, we use Beautiful Soup to extract the links of basic information page for all players.
 ``` python
@@ -109,11 +111,11 @@ players_basic_information_links  = [
 ]
 ```
 There are numerous ways to query the HTML code with BeautifulSoup. Here, we locate the salary table by "table tag" & its classes, then extract all links inside it.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/extract-links-inside-table.png" alt="Extract links inside table" caption="Extract links inside table"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/extract-links-inside-table.png" alt="Extract links inside table" caption="Extract links inside table"%}
 
 ### Extract basic information
 After getting the link to each player's basic information page, we will extract the basic information for each user. Most of those pieces of information are text and non-clickable, we need to locate its element by highlighting them and right clicking as below.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/inspect-stephen-curry-basic-information.png" alt="'Inspect' Stephen Curry Basic Information" caption="'Inspect' Stephen Curry Basic Information"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/inspect-stephen-curry-basic-information.png" alt="'Inspect' Stephen Curry Basic Information" caption="'Inspect' Stephen Curry Basic Information"%}
 
 Once again, you can use BeautifulSoup to extract the elements of those pieces of information by performing certain queries.
 ``` python
@@ -235,7 +237,7 @@ df = pd.DataFrame(all_players_info,
 print(df)
 ```
 You should see a table as below.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-information-pandas-table.png" alt="NBA players Information Pandas Table" caption="NBA players Information Pandas Table"%}
+{% include figure.html image="/images/Web-Scraping-with-selenium/nba-players-information-pandas-table.png" alt="NBA players Information Pandas Table" caption="NBA players Information Pandas Table"%}
 Finally, we export the information as a csv file
 ``` python
 import pandas as pd
@@ -253,6 +255,8 @@ The above tutorial outlines how to scrape data from web pages with just three py
 These technologies can monitor your websites' traffic, verify the authenticity of incoming traffic & block the incoming traffic. For example, [Geetest's BotSonar](https://www.geetest.com/BotSonar), which is adopted by multinational companies, e.g. KFC & Nike, that technology monitors your website 24/7 and distinguishes the traffic between bad bots and human beings by their AI technology. On top of that, you can choose how do you handle those bad incoming traffic, e.g. blocking the bad incoming traffic or showing fake content to them. Besides, Geetest respects your data privacy, their products are GDPR compliant, which is a plus if you are from enterprise background.
 
 
+## Source Code
+Source code is available at [https://github.com/JoeHO888/How-does-web-scraping-become-simpler-and-how-to-prevent-it/blob/main/How%20does%20web%20scraping%20become%20simpler%20and%20how%20to%20prevent%20it%20-%20Source%20Code.ipynb](https://github.com/JoeHO888/How-does-web-scraping-become-simpler-and-how-to-prevent-it/blob/main/How%20does%20web%20scraping%20become%20simpler%20and%20how%20to%20prevent%20it%20-%20Source%20Code.ipynb)
 
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
