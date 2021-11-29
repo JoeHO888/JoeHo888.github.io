@@ -6,7 +6,8 @@ categories:
 - MFA
 - PowerShell
 excerpt: |
-  With Authentication Administrator and Privileged Authentication Administrator, we can use non-Global Administrator to manage Azure AD (Active Directory) MFA (Multi-Factor Authentication) per user.feature_text: |
+  With Authentication Administrator and Privileged Authentication Administrator, we can use non-Global Administrator to manage Azure AD (Active Directory) MFA (Multi-Factor Authentication) per user.
+feature_text: |
   ## Least Permissive Role To Manage MFA In Azure AD
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
