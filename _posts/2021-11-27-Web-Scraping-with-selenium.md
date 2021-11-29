@@ -65,6 +65,7 @@ html = driver.page_source # Get the source code
 print(html)
 ```
 You should get the HTML code as below.
+``` HTML
 <html lang="en-US" class="js">
 	...
 	<head>
@@ -83,7 +84,31 @@ On the other hand, you should see a new browser is launched.
 In order to get each player's basic information, we need to navigate to the corresponding page & extract the data. The links of these pages are already in a table of the main page.
 {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-basic-informaion-link.png" alt="NBA players basic information link" caption="NBA players basic information link"%}
 To get the links in this table, we can find the corresponding HTML elements. We can use the below method to find the HTML element of those links of NBA players' basic information page.
+1. Right click one of the links. {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/right-click-a-nba-player-basic-information-link.png" alt="Right Click a NBA player's basic information link" caption="Right Click a NBA player's basic information link"%}
+2. Select "Inspect". {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/inspect-a-nba-player-basic-information-link-html-element.png" alt="Inspect a NBA player basic information link HTML element" caption="Inspect a NBA player basic information link HTML element"%}
+3. Developer tool should appear & the corresponding HTML element should be highlighted. {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-player-link-html-element.png" alt="NBA player link HTML element" caption="NBA player link HTML element"%}
+4. HTML elements for other players are similar to this one.
 
+Next, we use Beautiful Soup to extract the links of basic information page for all players.
+``` python
+from bs4 import BeautifulSoup
+
+...
+html = driver.page_source # Get the source code
+soup = BeautifulSoup(html, 'html.parser') # Represent the source code & Allow us to do searching
+
+# Locate the salary table & extract all links inside it
+salary_table = soup.find("table", {"class": ("hh-salaries-ranking-table", 
+                                             "hh-salaries-table-sortable",
+                                             "responsive")}
+                        )
+# players_basic_information_links store all links
+players_basic_information_links  = [
+    a_tag_element.get("href") 
+    for a_tag_element in salary_table.findChildren("a" , recursive=True)
+]
+```
+There are numerous ways to query the HTML code with BeautifulSoup. Here, we locate the salary table by "table tag" & its classes, then extract all links inside it.
 
 
 
