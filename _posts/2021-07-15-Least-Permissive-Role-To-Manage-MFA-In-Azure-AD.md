@@ -14,7 +14,7 @@ image: "https://picsum.photos/2560/600?image=733"
 ---
 
 ## Background
-With MFA (Multi-Factor Authentication) enabled by default in Azure AD (Active Directory) , there are always some situations we need to disable/re-enable MFA for some users. These tasks are easy and repetitive, but we hesitate to let helpdesk to handle it or automate it, as MFA management used to require Global Administrator, the greatest privilege in Azure AD.
+With MFA (Multi-Factor Authentication) enabled by default in Azure AD (Active Directory), there are always some situations we need to disable/re-enable MFA for some users. These tasks are easy and repetitive, but we hesitate to let helpdesk to handle it or automate it, as MFA management used to require Global Administrator, the greatest privilege in Azure AD.
 
 Recently, Microsoft announced two new roles, Authentication Administrator and Privileged Authentication Administrator, which we can use them to manage MFA per user.
 
@@ -23,14 +23,14 @@ Authentication Administrator and Privileged Authentication Administrator are Azu
 
 The main difference between these roles is that ONLY Privileged Authentication Administrator can manage authentication (including MFA) for administrator account. For general users, these two roles are the same.
 
-Per test, these two types of adminstrator cannot manage MFA per user in Microsoft Admin Portal/Azure AD Portal. However, it is doable to manage MFA per user in PowerShell
+Per test, these two types of administrators cannot manage MFA per user in Microsoft Admin Portal/Azure AD Portal. However, it is doable to manage MFA per user in PowerShell
 
 {% include figure.html image="/images/2021-07-15-Least-Permissive-Role-To-Manage-MFA-In-Azure-AD/normal-mfa-page.png" alt="Normal MFA Management Console" caption="Normal MFA Management Console"%}
 
 {% include figure.html image="/images/2021-07-15-Least-Permissive-Role-To-Manage-MFA-In-Azure-AD/access-denied-mfa-page.png" alt="Access denied when accessing MFA Management Console" caption="Access denied when accessing MFA Management Console"%}
 
 
-## PowerShell Demostration
+## PowerShell Demonstration
 Despite the limitation in Admin Portal, actually we can still manage MFA via PowerShell according to Microsoft’ document.
 
 {% include figure.html image="/images/2021-07-15-Least-Permissive-Role-To-Manage-MFA-In-Azure-AD/microsoft-document.png" alt="Microsoft Document about using PowerShell as Authentication Administrator and Privileged Authentication" caption="Microsoft Document about using PowerShell as Authentication Administrator and Privileged Authentication"%}

@@ -13,7 +13,7 @@ image: "https://picsum.photos/2560/600?image=733"
 ---
 
 ## Background
-In SharePoint Online, we sometimes need to restrict/edit permission for each list item, which is trivial in GUI, but invovles a few extra steps if you want to do it programmatically.
+In SharePoint Online, we sometimes need to restrict/edit permission for each list item, which is trivial in GUI, but it invovles a few extra steps if you want to do it programmatically.
 
 ## Setup
 1. SharePoint Online List
@@ -51,7 +51,7 @@ POST <Site URL>/_api/web/lists/getByTitle('<List Name>')/items(<Item ID>)/breakr
 {% include figure.html image="/images/2020-06-10-Change-SharePoint-Online-List-Item-Permission-With-SharePoint-API/after-break-inheritance.jpg" caption="After Break Inheritance" %}
 
 ### Grant Permission to User/Group
-We need to gather two piece of information, User/Group ID and Permission ID, then we can call a API with IDs to grant user/group permission.
+We need to gather two pieces of information, User/Group ID and Permission ID, then we can call a API with IDs to grant user/group permission.
 
 #### Gather User/Group ID and Permission ID
 To retrieve user/group ID, you can call below API with user email or group name.
