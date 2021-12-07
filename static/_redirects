@@ -1,0 +1,15 @@
+# Redirects from what the browser requests to what we serve
+/django/web%20development/2019/05/11/DetailView-Pagination/            /blog-posts/pagination-in-django-detailview/
+/vocabulary/2019/05/13/Technical-Terms-Chinese-English/            /blog-posts/technical-terms-in-chinese-and-english/
+/azure%20exam/2019/12/17/How-To-Pass-Azure-Az-900-Exam-In-20-hours/            /blog-posts/how-to-pass-azure-az-900-exam-in-20-hours/
+/aws/dynamodb/2020/02/27/Primary-Key-Design-In-AWS-DynamoDB/            /blog-posts/primary-key-design-in-aws-dynamodb/
+/sharepoint/office%20365/api/2020/06/10/How-To-Change-SharePoint-Online-List-Item-Permission-By-API/            /blog-posts/how-to-change-sharepoint-online-list-Item-permission-by-sharepoint-api/
+/azure/azure%20data%20factory/2020/12/05/How-To-Do-String-Interpolation-Azure-Data-Factory/            /blog-posts/how-to-do-string-interpolation-in-azure-data-factory/
+/azure/azure%20databricks/2020/12/19/How-To-Store-Secrets-In-Azure-Databricks/            /blog-posts/how-to-store-secrets-in-azure-databricks/
+/azure/azure%20databricks/azure%20synapse/2021/01/02/How-To-Connect-To-Azure-Synapse-In-Azure-Databricks/            /blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/
+/azure/azure%20data%20lake%20gen%202/access%20control/2021/01/30/Azure-Data-Lake-Gen-2-Access-Control-Overview/            /blog-posts/azure-data-lake-gen-2-access-control-overview/
+/azure/azure%20ad/mfa/powershell/2021/07/15/Least-Permissive-Role-To-Manage-MFA-In-Azure-AD/            /blog-posts/least-permissive-role-to-manage-mfa-in-azure-ad/
+
+/projects/Online-Car-Parking-Platform-BinLuIS/            /projects/online-car-parking-platform-binluis/
+/projects/Attempt-to-solve-Geetest-CAPTCHA/            /projects/attempt-to-solve-geetest-captcha/
+/projects/Web-Scraping-with-selenium/            /projects/web-scraping-with-selenium/
