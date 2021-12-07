@@ -19,14 +19,13 @@ span + em {
       display: block;
 }
 
-img[src*=".gif"] {
+video {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
 }
 
-.gif-text{
+.video-text{
     text-align: center;
     display: block;
 }

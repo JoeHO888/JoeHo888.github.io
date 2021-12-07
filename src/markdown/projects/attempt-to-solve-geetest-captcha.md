@@ -26,8 +26,11 @@ There are some icons in the CAPTCHA. They may look like what the CAPTCHA asks yo
 Here's a Geetest CAPTCHA I am able to crack with image processing and automation technology. In this following sections, I will share how I try to crack the CAPTCHA.
 
 
-![Successful Case for cracking CAPTCHA](../../images/attempt-to-solve-geetest-captcha/successful_cracking.gif)
-<em class='gif-text' >
+<video autoplay loop>
+  <source src="../../images/attempt-to-solve-geetest-captcha/successful_cracking.mp4" type="video/mp4">
+  Successful Case for cracking CAPTCHA
+</video>
+<em class='video-text' >
 Successful Case for cracking CAPTCHA
 </em>
 
@@ -168,8 +171,11 @@ action.click()
 action.perform()
 ```
 
-![Solve the CAPTCHA](../../images/attempt-to-solve-geetest-captcha/complete-demo-CAPTCHA.gif)
-<em class='gif-text' >
+<video autoplay loop>
+  <source src="../../images/attempt-to-solve-geetest-captcha/complete-demo-CAPTCHA.mp4" type="video/mp4">
+  Solve the CAPTCHA
+</video>
+<em class='video-text' >
 Solve the CAPTCHA
 </em>
 
