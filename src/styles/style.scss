@@ -23,7 +23,12 @@ video {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    @media(max-width: 600px) {
+        width: 100%
+    }
 }
+
+
 
 .video-text{
     text-align: center;
