@@ -28,12 +28,6 @@ This will configure your storage credentials in your notebook session, which we 
 spark.conf.set(fs.azure.account.key.<<your-storage-account-name>>.blob.core.windows.net, ”<<your-storage-account-access-key>>”)
 ```
 
-```python
-# Python
-
-spark.conf.set(fs.azure.account.key.<<your-storage-account-name>>.blob.core.windows.net, ”<<your-storage-account-access-key>>”)
-```
-
 #### Azure Data Lake Gen 2 As Staging Storage
 ```python
 # Python

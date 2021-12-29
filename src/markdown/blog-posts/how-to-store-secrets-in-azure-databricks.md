@@ -90,7 +90,7 @@ If your databricks is in Standard plan, you can only create secret scope which w
 # Bash
 databricks secrets create-scope --scope <<scope>>
 
-Example: 
+# Example
 databricks secrets create-scope --scope storage --initial-manage-principal users # Standard Plan
 databricks secrets create-scope --scope storage # Premium plan
 ```
@@ -104,7 +104,7 @@ You can use below command to create secret under the specified scope.
 # Bash
 databricks secrets put --scope <<scope>> --key <<key name>>
 
-Example: databricks secrets put --scope storage --key blob
+databricks secrets put --scope storage --key blob #Example
 ```
 
 ![Type command to launch secret editor](../../images/how-to-store-secrets-in-azure-databricks/launch-secret-editor.jpg)
@@ -120,7 +120,7 @@ You can use secret by below command in notebook.
 # Python
 dbutils.secrets.get(scope=<<scope>>,key=<<key>>)
 
-Example: dbutils.secrets.get(scope=storage,key=blob)
+dbutils.secrets.get(scope=storage,key=blob) #Example
 ```
 
 ![Use stored secret in notebook](../../images/how-to-store-secrets-in-azure-databricks/notebook-demo.jpg)
