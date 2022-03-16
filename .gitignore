@@ -70,3 +70,5 @@ yarn-error.log
 
 
 .package-lock.json
+*.docx
+Blog Topic.txt
