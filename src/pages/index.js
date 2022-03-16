@@ -225,7 +225,7 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                 <ol>
                     <li><a href="https://www.instagram.com/japan_photo_everyday/">Japan Photo Everyday</a>, an Instagram account to share beautiful photos in Japan & recommend resort in Japan</li>
                     <li><a href="http://paymentcatch.com/">Payment Catch</a>, a software to let merchants collect online recurring payment</li>
-                    <li><a href="https://apps.shopify.com/blulish-insights">Blulish Reports</a>, Shopify Analytics Tool On Sales, Products and Orders</li>
+                    <li><a href="https://blulish.com">Blulish Reports</a>, Shopify Analytics Tool On Sales, Products and Orders</li>
                 </ol>
                 <h2>
                     Contact
