@@ -143,12 +143,12 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
 
         <Hero>
             <div>
-                <h1>
+                <span class="hero-text">
                     Hello, I'm <span style={{ color: "#c1272e" }}>Joe </span>.
                     Primarily, I work on <span style={{ color: "#5393fe" }}> Azure</span> and <span style={{ color: "#6cbb47" }}> Cyber Security</span>.
                     Sometimes, I write Technology related <a target="_blank" href="/blog/" style={{ color: "#B57BFF", textDecoration: "none" }}>Blog Posts</a> or
                     do interesting <a target="_blank" href="/projects/" style={{ color: "#4947bb", textDecoration: "none" }}>projects</a>.
-                </h1>
+                </span>
             </div>
             <>
                 <Button>
@@ -226,6 +226,7 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                     <li><a href="https://www.instagram.com/japan_photo_everyday/">Japan Photo Everyday</a>, an Instagram account to share beautiful photos in Japan & recommend resort in Japan</li>
                     <li><a href="http://paymentcatch.com/">Payment Catch</a>, a software to let merchants collect online recurring payment</li>
                     <li><a href="https://blulish.com">Blulish Reports</a>, Shopify Analytics Tool On Sales, Products and Orders</li>
+                    <li><a href="https://chinesechristianresources.com/">Chinese Christian Resources</a>, Shopify Analytics Tool On Sales, Products and Orders</li>
                 </ol>
                 <h2>
                     Contact
