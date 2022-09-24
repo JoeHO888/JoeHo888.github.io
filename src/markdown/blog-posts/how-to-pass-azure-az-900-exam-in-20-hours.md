@@ -2,7 +2,7 @@
 date: "2019-12-17"
 slug: "/blog-posts/how-to-pass-azure-az-900-exam-in-20-hours/"
 title: "How to pass Azure AZ-900 exam in 20 hours"
-description: "Utimate guide to pass Azure AZ-900 exam, including materials, suggested preparations"
+description: "A simple guide about detail and objectives of AZ-900 with suggested practice tests and study materials"
 featuredImage: how-to-pass-azure-az-900-exam-in-20-hours.png
 ---
 ## Background

@@ -2,7 +2,7 @@
 date: "2021-01-30"
 slug: "/blog-posts/azure-data-lake-gen-2-access-control-overview/"
 title: "Azure Data Lake Gen 2 Access Control Overview"
-description: "Access Control in Azure Data Lake Gen 2"
+description: "Configure different access control mechanisms, including Shared Key, SAS and RBAC, for Azure Data Lake Gen 2 on container, folder and blob level"
 featuredImage: azure-data-lake-gen-2-access-control-overview.png
 ---
 ## Background

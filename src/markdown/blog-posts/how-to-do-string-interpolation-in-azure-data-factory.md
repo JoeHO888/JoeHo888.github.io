@@ -2,7 +2,7 @@
 date: "2020-12-05"
 slug: "/blog-posts/how-to-do-string-interpolation-in-azure-data-factory/"
 title: "How to do string interpolation in Azure Data Factory"
-description: "How to put your variables insider String Expression in Azure Data Factory"
+description: "interpolate variable into a string elegantly instead of built-in concat function in Azure Data Factory"
 featuredImage: how-to-do-string-interpolation-in-azure-data-factory.png
 ---
 ## Background

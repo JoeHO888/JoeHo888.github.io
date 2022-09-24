@@ -2,7 +2,7 @@
 date: "2019-07-04"
 slug: "/blog-posts/access-local-file-system-from-power-automate/"
 title: "Access Local File System From Power Automate"
-description: "Access Local File System From Power Automate"
+description: "Configure Power Automate to access on-premises local file system"
 featuredImage: access-local-file-system-from-power-automate.png
 ---
 Microsoft Flow can connect to various cloud file systems which we are familiar with, e.g. OneDrive and SharePoint, but we often have some existing on-premise or local file system we would like to build some automation on. One of the tools to solve this requirement is that we can use file system connector in Microsoft flow, just with a few clicks, we can connect our local file system to Microsoft flow.

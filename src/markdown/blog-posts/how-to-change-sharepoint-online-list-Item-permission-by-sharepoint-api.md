@@ -2,7 +2,7 @@
 date: "2020-06-10"
 slug: "/blog-posts/how-to-change-sharepoint-online-list-Item-permission-by-sharepoint-api/"
 title: "How to change SharePoint Online List Item Permission by SharePoint API"
-description: "Change SharePoint Online list item permission by SharePoint API"
+description: "Make SharePoint RESTful API call in Power Automate to change SharePoint Online List Item permission"
 featuredImage: how-to-change-sharepoint-online-list-Item-permission-by-sharepoint-api.png
 ---
 ## Background

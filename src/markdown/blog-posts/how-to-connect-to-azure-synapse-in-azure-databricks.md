@@ -2,7 +2,7 @@
 date: "2021-01-02"
 slug: "/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/"
 title: "How to connect to Azure Synapse in Azure Databricks"
-description: "Connect to Azure Synapse in Azure Databricks"
+description: "Configure Azure Databricks notebook to connect, read & write data to Azure Synapse"
 featuredImage: how-to-connect-to-azure-synapse-in-azure-databricks.png
 ---
 ## Background
