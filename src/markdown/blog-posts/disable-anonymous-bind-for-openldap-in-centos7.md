@@ -29,7 +29,7 @@ By default, you can query LDAP data as an anonymous
 ldapsearch -LLL -x -b "dc=abc,dc=local" '(uid=joe)'
 ```
 ![Anonymous query](../../images/disable-anonymous-bind-for-openldap-in-centos7/anonymous-query.png)
-Now, we will disable it. Create a disable_bind_anon.ldif with below content
+Now, we will disable it. Create a disable\_bind\_anon.ldif with below content
 ```bash
 dn: cn=config
 changetype: modify
