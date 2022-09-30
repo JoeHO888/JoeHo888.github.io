@@ -93,7 +93,8 @@ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
 Create a file, **entries.ldif**, and add below content which 
 1. create a user, joe
 2. assign joe to 2 groups, joe & Engineering
-```bash
+
+```
 dn: dc=abc,dc=local
 dc: abc
 objectClass: top
@@ -131,14 +132,15 @@ shadowMax: 2
 shadowWarning: 1
 userPassword: {CRYPT}x
 shadowLastChange: 19261
-
 dn: cn=joe,ou=Groups,dc=abc,dc=local
 cn: joe
 objectClass: posixGroup
 gidNumber: 20001
 memberUid: joe
 ```
+
 Apply the content
+
 ```bash
 ldapadd -x -W -D "cn=admin,dc=abc,dc=local" -f entries.ldif
 ```
@@ -149,7 +151,7 @@ ldapsearch -D cn="admin,dc=abc,dc=local" -W -b "dc=abc,dc=local"
 ```
 ![query result](../../images/install-and-configure-openldap-server-in-centos7/query-result.png)
 
-## Conclustion
+## Conclusion
 We complete the whole set up and are able to create users and manage them in LDAP
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
