@@ -151,6 +151,38 @@ ldapsearch -D cn="admin,dc=abc,dc=local" -W -b "dc=abc,dc=local"
 ```
 ![query result](../../images/install-and-configure-openldap-server-in-centos7/query-result.png)
 
+### Change account password (Optional)
+The account we created above uses a password, **{CRYPT}x**, which we obviously don't want it to be, so we change the password as below
+```bash
+sudo ldappasswd -x -D cn=admin,dc=abc,dc=local -W -S uid=joe,ou=People,dc=abc,dc=local
+```
+![Change account password](../../images/install-and-configure-openldap-server-in-centos7/change-account-password.png)
+
+### Configure Access Control List (ACL) (Optional)
+In the future, we may want the users to manage the password themselves, so we create an ACL to let the account owner to do so.
+
+Create ACL configuration file
+```bash
+cat > auth_acl.ldif << EOF
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcAccess
+olcAccess: {0}to attrs=userPassword by self write by anonymous auth by * none
+olcAccess: {1}to attrs=shadowLastChange by self write by * read
+olcAccess: {2}to * by * read
+EOF
+
+sudo ldapadd -Y EXTERNAL -H ldapi:/// -f auth_acl.ldif # Apply ACL
+
+sudo ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:/// -b olcDatabase={2}hdb,cn=config '(olcAccess=*)' olcAccess olcSuffix # Verify ACL
+```
+![Verify ACL](../../images/install-and-configure-openldap-server-in-centos7/verify-acl.png)
+Test password change
+```bash
+sudo ldappasswd -x -D uid=joe,ou=People,dc=abc,dc=local -W -S uid=joe,ou=People,dc=abc,dc=local
+```
+![Test password change](../../images/install-and-configure-openldap-server-in-centos7/test-password-change.png)
+
 ## Conclusion
 We complete the whole set up and are able to create users and manage them in LDAP
 
