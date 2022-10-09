@@ -146,10 +146,10 @@ If you can see the response, then you successfully talk to OpenLDAP over SSL/TLS
 If your client uses nss-pam-ldapd to login LDAP accounts, you can follow below guide to configure StartTLS for it.
 ### Configure StartTLS setting for nslcd
 ```bash
-sudo sed 's/^ssl no/ssl start_tls/' /etc/nslcd.conf -i # Specify StartTLS
+sudo authconfig  --enableldaptls --update # Specify StartTLS
 echo "tls_cacertfile  /etc/openldap/certs/rootCA.pem" | sudo tee -a /etc/nslcd.conf # Specify Root CA certificate
 # Use common name of the certificate, otherwise you will encounter connection error due to mismatch between hostname and the common name in the certificate (More in the below)
-sudo sed 's/^uri.*/uri ldap:\/\/ldap1.abc.local\//' /etc/nslcd.conf -i 
+sudo authconfig --ldapserver=ldap1.abc.local --update
 sudo systemctl restart nslcd
 ```
 ![nss-pam-ldapd config](../../images/configure-starttls-to-encrypt-openldap-connection-on-centos7/nss-pam-ldapd-config.png)
