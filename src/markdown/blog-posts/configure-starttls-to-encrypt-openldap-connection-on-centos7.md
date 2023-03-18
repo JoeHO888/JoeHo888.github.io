@@ -5,18 +5,18 @@ title: "Configure StartTLS to encrypt OpenLDAP connection on centos 7"
 description: "Enable StartTLS on OpenLDAP CentOS 7 server with self-signed certificate and allow clients to authenticate to OpenLDAP server with StartTls"
 featuredImage: configure-openldap-login-for-centos7.png
 ---
-By default, the communication between OpenLDAP server and client is unencrypted, which is vulnerable to man in the middle attack. By sniffing the LDAP traffic, attacker can see plaintext data, including password you send to OpenLDAP server for authentication. To secure this connection, we can encrypt the traffic to prevent attacker from intercepting the traffic, thus any sensitive data.
+By default, the communication between an OpenLDAP server and client is unencrypted, making it vulnerable to a man-in-the-middle attack. An attacker can intercept and view plaintext data, including the password you send to the OpenLDAP server for authentication. To secure this connection, we can encrypt the traffic to prevent the attacker from intercepting any sensitive data.
 
-In this guide, I will share with you how to configure StartTLS on OpenLDAP server, enable clients to communicate with OpenLDAP server with StartTLS and use LDAP accounts to login the host over encrypted tunnel with the integration of nss-pam-ldapd. 
+In this guide, I will show you how to configure StartTLS on an OpenLDAP server, enabling clients to communicate with the server using StartTLS and allowing LDAP accounts to log in to the host over an encrypted tunnel with the integration of nss-pam-ldapd.
 
 ## Concepts
-In general, there are 2 ways to encrypt LDAP traffic with SSL/TLS
+In general, there are two ways to encrypt LDAP traffic with SSL/TLS.
 
-First, we have LDAPS. Client and server will negotiate encryption cipher, exchange the key first. Then following LDAP communication will be encrypted by the key. This connection operates at port 636.
+First, we have LDAPS. The client and server negotiate the encryption cipher and exchange the key first. Then, following LDAP communication, will be encrypted by the key. This connection operates on port 636.
 
-Second, we have StartTLS. Instead of cipher negotiation and key exchange at first, client will send a LDAP message to ask the server & see if the server support TLS of not. If yes, they will proceed cipher negotiation and key exchange and the following LDAP communication will be encrypted by the key. This connection will use the same port as traditional LDAP, port 389. 
+Second, we have StartTLS. Instead of cipher negotiation and key exchange at first, the client will send an LDAP message to ask the server if it supports TLS or not. If yes, they will proceed with cipher negotiation and key exchange, and the following LDAP communication will be encrypted by the key. This connection will use the same port as traditional LDAP, port 389.
 
-Compared to LDAPS, StartTLS allows you to use same port to support clients which use/don't use SSL/TLS. However, StartTLS is susceptible to downgrade attack, STRIPTLS, attacker will tamper the initial StartTLS response from the server to mislead the clients that the server doesn't support SSL/TLS. As a result, applications on the client may fallback to unencrypted LDAP connection and suffer from sniffing attack again.
+Compared to LDAPS, StartTLS allows you to use the same port to support clients that use or don't use SSL/TLS. However, StartTLS is susceptible to downgrade attacks, such as STRIPTLS. An attacker will tamper with the initial StartTLS response from the server to mislead the clients that the server doesn't support SSL/TLS. As a result, applications on the client may fall back to an unencrypted LDAP connection and suffer from sniffing attacks again.
 
 ### Unencrypted LDAP traffic
 As mentioned, LDAP traffic is transmitted in plain text by default. If the client does not request to initialize encrypted tunnel, i.e. LDAPS or StartTLS, the traffic will be in plain text and attacker can steal sensitive data, e.g. password in the bind request.
@@ -26,7 +26,7 @@ ldapsearch -D cn="admin,dc=abc,dc=local" -W -b "dc=abc,dc=local" objectClass=* -
 ![Unencrypted LDAP traffic](../../images/configure-starttls-to-encrypt-openldap-connection-on-centos7/unencrypted-ldap-traffic.png)
 
 ### Encrypted LDAP traffic - StartTLS
-If the client request to initialize encrypted tunnel & the server supports it, the traffic will be encrypted. If you client chooses to adopt StartTLS, it will send StartTLS first to establish SSL/TLS tunnel, and following traffic will be encrypted
+If the client requests to initialize an encrypted tunnel and the server supports it, the traffic will be encrypted. If the client chooses to adopt StartTLS, it will send StartTLS first to establish an SSL/TLS tunnel, and the following traffic will be encrypted.
 ```bash
 ldapsearch -D cn="admin,dc=abc,dc=local" -W -b "dc=abc,dc=local" objectClass=* -H ldap://ldap1.abc.local -Z # Z flag to initialize StartTLS
 ```

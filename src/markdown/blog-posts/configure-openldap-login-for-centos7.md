@@ -5,9 +5,9 @@ title: "Configure OpenLDAP login for CentOS 7"
 description: "Configure a CentOS 7 host to enable user authentication to OpenLDAP directory and allow LDAP identity to login"
 featuredImage: configure-openldap-login-for-centos7.png
 ---
-It is easy to create local accounts for a linux machine, but it's a disaster for you to create and manage numerous accounts for thousands of machines. With OpenLDAP, you can store accounts in OpenLDAP server, and you can use these accounts to login to all of your machines. Such centralization helps you manage accounts easily & reuse created accounts to login new accounts.
+Creating local accounts for a Linux machine is easy, but managing numerous accounts for thousands of machines can be a disaster. With OpenLDAP, you can store accounts in the server and use them to log in to all of your machines. This centralization makes account management easy and allows you to reuse created accounts to log in to new machines.
 
-In this guide, I will share how to configure the host to use OpenLDAP to do the authentication.
+In this guide, I will explain how to configure the host to use OpenLDAP for authentication.
 
 ## Prerequisites
 You need to have a OpenLDAP server and an account which belongs to **posixAccount** and **shadowAccount**. This [guide](/blog-posts/install-and-configure-openldap-server-in-centos7/) will help you meet the prerequisites.

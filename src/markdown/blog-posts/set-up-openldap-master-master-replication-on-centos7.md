@@ -5,19 +5,19 @@ title: "Set up OpenLDAP master master replication on CentOS 7"
 description: "Synchronize directory information data among multiple OpenLDAP master servers on CentOS 7, each of them can replicate new change from other OpenLDAP servers"
 featuredImage: configure-openldap-login-for-centos7.png
 ---
-OpenLDAP plays an important role in enterprise computing environment, it makes sense that we have multiple LDAP servers to achieve high availability and better performance. The former one is about having LDAP service always up, your clients can failover to other OpenLDAP servers if the server they used to talk to is down. The latter one is about distributing OpenLDAP servers in different regions, it allows clients in each region can talk to the nearby OpenLDAP servers, which reduces the network latency and have better performance.
+OpenLDAP plays an important role in enterprise computing environments. It makes sense to have multiple LDAP servers to achieve high availability and better performance. The former goal is about ensuring that the LDAP service is always up. Clients can failover to other OpenLDAP servers if the server they were communicating with goes down. The latter goal is about distributing OpenLDAP servers in different regions. This allows clients in each region to communicate with nearby OpenLDAP servers, which reduces network latency and improves performance.
 
-If you want to have multiple OpenLDAP servers, the first issue you need to solve is the synchronization between them, you need to ensure that the directory data in each server is the same and the data updated in any of each OpenLDAP server will populate to other OpenLDAP servers as well. Otherwise, such inconsistency will cause authentication fails and improper identity handling.
+If you want to have multiple OpenLDAP servers, the first issue you need to solve is synchronization between them. You need to ensure that the directory data in each server is the same and that any data updated in one OpenLDAP server will be propagated to other OpenLDAP servers as well. Inconsistencies in the data can cause authentication failures and improper identity handling.
 
 In this guide, I will share how to set up master-master replication for OpenLDAP on CentOS 7.
 
 ## Concepts
-Regarding OpenLDAP directory information data replication, each OpenLDAP server can play as a provider and/or consumer role. Being as a provider, your counterpart, consumer will pull the directory data from you. It's worth mentioned that a server can play as both provider and consumer, which means that it can replicate the data from other OpenLDAP servers as a consumer and any change in this server will be populated into other OpenLDAP servers given that it's a provider.
+Regarding OpenLDAP directory information data replication, each OpenLDAP server can play the role of provider and/or consumer. When acting as a provider, the counterpart consumer will pull the directory data from you. It's worth mentioning that a server can act as both provider and consumer, meaning it can replicate data from other OpenLDAP servers as a consumer, and any changes made to that server will be propagated to other OpenLDAP servers as a provider.
 
-In general, OpenLDAP replication can be achieved in master-slave model or master-master model. In master-slave model, there is only 1 provider and other LDAP servers are consumers, you can only update directory information in the provider. In master-master model, each server is a provider and consumer, you can update any of them.
+In general, OpenLDAP replication can be achieved using a master-slave model or a master-master model. In the master-slave model, there is only one provider, and the other LDAP servers are consumers. You can only update the directory information in the provider. In the master-master model, each server is a provider and consumer, and you can update any of them.
 
 ## Configuration
-In the below set up, we assume you have 2 OpenLDAP servers, LDAP1 & LDAP2. The below configuration is for LDAP1 only, you need to do it again for LDAP2 such that they can perform master-master replication
+In the setup below, we assume you have two OpenLDAP servers, LDAP1 and LDAP2. The configuration provided is for LDAP1 only, so you will need to repeat it for LDAP2 in order for them to perform master-master replication.
 
 ### OpenLDAP replication service account and access control lists (ACL)
 You can create a service account for OpenLDAP server to pull the data from another OpenLDAP server
@@ -204,7 +204,7 @@ ldapsearch -x -LLL  -D cn=admin,dc=abc,dc=local -W -b dc=abc,dc=local '(uid=user
 ![Master-master OpenLDAP replication verification](../../images/set-up-openldap-master-master-replication-on-centos7/master-master-openldap-replication-verification.png)
 
 ## Conclusion
-In this guide, we discuss the benefits of having multiple OpenLDAP servers, cover a guide to make them synchronized through master-master replication which any update on any server will be populated into all other servers.
+In this guide, we discuss the benefits of having multiple OpenLDAP servers and provide a guide for synchronizing them using master-master replication, which ensures that any update made on one server will be propagated to all other servers.
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
 
