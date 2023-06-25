@@ -17,7 +17,7 @@ const Date = styled("div")`
     margin: 0;
 `
 
-const Card = ({ date, slug, title, description, imageLink }) => (
+const Card = ({ date, slug, title, description, imageLink, tags }) => (
     <Link to={slug} className="post-card">
         <header className="post-card-header">
             {imageLink && (
@@ -31,6 +31,9 @@ const Card = ({ date, slug, title, description, imageLink }) => (
             )}
             <h2 className="post-card-title">{title}</h2>
         </header>
+        <section className="post-card-tag">
+            {tags && "🏷 " + tags.join(", ")}
+        </section>
         <section className="post-card-excerpt">{description}</section>
         <Metas>
             <Date>

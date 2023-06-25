@@ -73,6 +73,7 @@ const Blog = ({ posts, meta }) => (
                             description={post.frontmatter.description}
                             category={post.frontmatter.category}
                             imageLink={post.frontmatter.featuredImage.childImageSharp.fluid.src}
+                            tags={post.frontmatter.tags}
                         />
                     ))}
                 </section>
@@ -110,6 +111,7 @@ export const query = graphql`
         slug
         title
         description
+        tags
         featuredImage {
                     childImageSharp {
                         fluid(maxWidth: 800) {

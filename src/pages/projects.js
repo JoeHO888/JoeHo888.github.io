@@ -73,6 +73,7 @@ const Work = ({ projects, meta }) => (
                         description={project.frontmatter.description}
                         category={project.frontmatter.category}
                         imageLink={project.frontmatter.featuredImage.childImageSharp.fluid.src}
+                        tags={project.frontmatter.tags}
                     />
                 ))}
                 </section>
@@ -108,6 +109,7 @@ export const query = graphql`
         slug
         title
         description
+        tags
         featuredImage {
                     childImageSharp {
                         fluid(maxWidth: 800) {
