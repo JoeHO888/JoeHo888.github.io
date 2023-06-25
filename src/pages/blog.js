@@ -61,17 +61,23 @@ const Blog = ({ posts, meta }) => (
             <BlogTitle>
                 Blog Posts
             </BlogTitle>
-            {posts.map((post, i) => (
-                <Card
-                    key={i}
-                    date={post.frontmatter.date}
-                    slug={post.frontmatter.slug}
-                    title={post.frontmatter.title}
-                    description={post.frontmatter.description}
-                    category={post.frontmatter.category}
-                    imageLink={post.frontmatter.featuredImage.childImageSharp.fluid.src}
-                />
-            ))}
+
+            <div className="container">
+                <section className="post-feed">
+                    {posts.map((post, i) => (
+                        <Card
+                            key={i}
+                            date={post.frontmatter.date}
+                            slug={post.frontmatter.slug}
+                            title={post.frontmatter.title}
+                            description={post.frontmatter.description}
+                            category={post.frontmatter.category}
+                            imageLink={post.frontmatter.featuredImage.childImageSharp.fluid.src}
+                        />
+                    ))}
+                </section>
+            </div>
+
         </Layout>
     </>
 );
