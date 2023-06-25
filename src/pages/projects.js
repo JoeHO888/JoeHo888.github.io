@@ -61,7 +61,9 @@ const Work = ({ projects, meta }) => (
             <ProjectTitle>
                 Projects
             </ProjectTitle>
-            <>
+
+            <div className="container">
+                <section className="post-feed">
                 {projects.map((project, i) => (
                     <Card
                         key={i}
@@ -73,7 +75,8 @@ const Work = ({ projects, meta }) => (
                         imageLink={project.frontmatter.featuredImage.childImageSharp.fluid.src}
                     />
                 ))}
-            </>
+                </section>
+            </div>
         </Layout>
     </>
 );
