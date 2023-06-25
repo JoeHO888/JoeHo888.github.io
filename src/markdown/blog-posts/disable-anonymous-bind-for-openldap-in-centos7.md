@@ -4,6 +4,8 @@ slug: "/blog-posts/disable-anonymous-bind-for-openldap-in-centos7/"
 title: "Disable anonymous bind for OpenLDAP in Centos7"
 description: "Discuss what bind request is and how to configure them for OpenLDAP in Centos7"
 featuredImage: disable-anonymous-bind-for-openldap-in-centos7.png
+tags: 
+- "Linux"
 ---
 LDAP bind is a process which the client tries to authenticate themselves to the server. Depends on the server set up, such bind request sent from client may contain no credentials (i.e. anonymous bind).
 

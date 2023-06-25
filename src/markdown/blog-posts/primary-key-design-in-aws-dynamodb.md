@@ -4,6 +4,9 @@ slug: "/blog-posts/primary-key-design-in-aws-dynamodb/"
 title: "Primary Key Design In AWS DynamoDB"
 description: "A guide about how AWS Dynamo DB use primary key to mange, sort and retrieve the data and considerations for picking a primary key"
 featuredImage: primary-key-design-in-aws-dynamodb.png
+tags: 
+- "AWS"
+- "Database"
 ---
 ## Background
 AWS DynamoDB is a key-values database, every item in DynamoDB is associated an unique primary key which is required in almost all DynamoDB's APIs, so having a good design on this primary key is crucial for your development.

@@ -4,6 +4,8 @@ slug: "/blog-posts/install-and-configure-openldap-server-in-centos7/"
 title: "Install and configure OpenLDAP server in CentOS 7"
 description: "Install OpenLDAP server, initialize OpenLDAP, apply common LDAP schema configuration and create users in OpenLDAP in CentOS 7"
 featuredImage: install-and-configure-openldap-server-in-centos7.png
+tags: 
+- "Linux"
 ---
 LDAP, Lightweight Directory Access Protocol is a directory service for us to manage identities and objects easily. One of the most common application is that you can authenticate to a server with LDAP. In Windows world, the server is usually Active Directory. In Linux world, OpenLDAP is widely adopted.
 

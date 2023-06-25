@@ -4,6 +4,8 @@ slug: "/blog-posts/azure-data-lake-gen-2-access-control-overview/"
 title: "Azure Data Lake Gen 2 Access Control Overview"
 description: "Configure different access control mechanisms, including Shared Key, SAS and RBAC, for Azure Data Lake Gen 2 on container, folder and blob level"
 featuredImage: azure-data-lake-gen-2-access-control-overview.png
+tags: 
+- "Azure"
 ---
 ## Background
 Azure Data Lake Gen 2 offers fine-grained access control on your data, it allows you to customize permission, defines permission settings per container, folder or file be because of its hierarchical namespace.

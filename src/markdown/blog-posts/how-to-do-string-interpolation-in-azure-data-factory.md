@@ -4,6 +4,9 @@ slug: "/blog-posts/how-to-do-string-interpolation-in-azure-data-factory/"
 title: "How to do string interpolation in Azure Data Factory"
 description: "interpolate variable into a string elegantly instead of built-in concat function in Azure Data Factory"
 featuredImage: how-to-do-string-interpolation-in-azure-data-factory.png
+tags: 
+- "Azure"
+- "Data Engineering"
 ---
 ## Background
 Azure Data Factory allows us to add dynamic content in certain fields. Sometimes, we want to insert the value of variables, value of function or output of last activity into our string for dynamic content.

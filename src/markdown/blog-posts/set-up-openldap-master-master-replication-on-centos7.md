@@ -4,6 +4,8 @@ slug: "/blog-posts/set-up-openldap-master-master-replication-on-centos7/"
 title: "Set up OpenLDAP master master replication on CentOS 7"
 description: "Synchronize directory information data among multiple OpenLDAP master servers on CentOS 7, each of them can replicate new change from other OpenLDAP servers"
 featuredImage: configure-openldap-login-for-centos7.png
+tags: 
+- "Linux"
 ---
 OpenLDAP plays an important role in enterprise computing environments. It makes sense to have multiple LDAP servers to achieve high availability and better performance. The former goal is about ensuring that the LDAP service is always up. Clients can failover to other OpenLDAP servers if the server they were communicating with goes down. The latter goal is about distributing OpenLDAP servers in different regions. This allows clients in each region to communicate with nearby OpenLDAP servers, which reduces network latency and improves performance.
 

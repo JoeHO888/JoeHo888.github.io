@@ -4,6 +4,9 @@ slug: "/blog-posts/least-permissive-role-to-manage-mfa-in-azure-ad/"
 title: "Least Permissive Role To Manage MFA In Azure AD"
 description: "A guide to manage Multi-factor authentication (MFA) with least permissive role in Azure AD"
 featuredImage: least-permissive-role-to-manage-mfa-in-azure-ad.jpg
+tags: 
+- "Azure"
+- "Azure Active Directory"
 ---
 ## Background
 With MFA (Multi-Factor Authentication) enabled by default in Azure AD (Active Directory) , there are always some situations we need to disable/re-enable MFA for some users. These tasks are easy and repetitive, but we hesitate to let helpdesk to handle it or automate it, as MFA management used to require Global Administrator, the greatest privilege in Azure AD.

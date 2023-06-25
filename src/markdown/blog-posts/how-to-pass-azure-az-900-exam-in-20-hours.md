@@ -4,6 +4,8 @@ slug: "/blog-posts/how-to-pass-azure-az-900-exam-in-20-hours/"
 title: "How to pass Azure AZ-900 exam in 20 hours"
 description: "A simple guide about detail and objectives of AZ-900 with suggested practice tests and study materials"
 featuredImage: how-to-pass-azure-az-900-exam-in-20-hours.png
+tags: 
+- "Azure"
 ---
 ## Background
 Microsoft's Azure is one of the major cloud computing service, it is the second largest Public Cloud Service with about [19% of market share](https://www.statista.com/chart/18819/worldwide-market-share-of-leading-cloud-infrastructure-service-providers/ "Market Share"). Considering the growth in public cloud service, learning Azure definitely brings you more career opportunities and growth, you may earn [15% higher salary](https://www.microsoft.com/en-us/learning/certification-benefits.aspx "Salary") as reported by Microsoft if you are certificated. Microsoft offers lots of Azure related certifications for different kind of roles, e.g. Developers, IT Administrators and Data Scientists. 

@@ -4,6 +4,9 @@ slug: "/projects/web-scraping-with-selenium/"
 title: "Web Scraping With Selenium"
 description: "Simple example to scrape NBA player’s salary"
 featuredImage: web-scraping-with-selenium.png
+tags: 
+- "Cyber Security"
+- "Python"
 ---
 ## Introduction
 Web scraping refers to extracting the content of a website programmatically. Specifically, developers create bots to get the HTML code of a website, parse the code and export the result to an external data source.

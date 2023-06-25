@@ -4,6 +4,9 @@ slug: "/blog-posts/how-to-store-secrets-in-azure-databricks/"
 title: "How to store secrets in Azure Databricks"
 description: "A guide to store secret securely in Azure Databricks CLI and use it in Azure Databricks notebook"
 featuredImage: how-to-store-secrets-in-azure-databricks.png
+tags: 
+- "Azure"
+- "Data Engineering"
 ---
 ## Background
 In Azure Databricks, we can write code to perform data transformation on data stored in various Azure Services, e.g. Azure Blob Storage, Azure Synapse. However, as other programs, sometimes, you want to protect credentials used in Azure Databricks, Azure Databricks provides a solid secret management approach to help you achieve that.

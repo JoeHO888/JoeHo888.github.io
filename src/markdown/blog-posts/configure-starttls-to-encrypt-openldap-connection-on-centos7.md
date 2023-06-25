@@ -4,6 +4,8 @@ slug: "/blog-posts/configure-starttls-to-encrypt-openldap-connection-on-centos7/
 title: "Configure StartTLS to encrypt OpenLDAP connection on centos 7"
 description: "Enable StartTLS on OpenLDAP CentOS 7 server with self-signed certificate and allow clients to authenticate to OpenLDAP server with StartTls"
 featuredImage: configure-openldap-login-for-centos7.png
+tags: 
+- "Linux"
 ---
 By default, the communication between an OpenLDAP server and client is unencrypted, making it vulnerable to a man-in-the-middle attack. An attacker can intercept and view plaintext data, including the password you send to the OpenLDAP server for authentication. To secure this connection, we can encrypt the traffic to prevent the attacker from intercepting any sensitive data.
 

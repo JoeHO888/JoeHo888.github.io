@@ -4,6 +4,8 @@ slug: "/projects/attempt-to-solve-geetest-captcha/"
 title: "Attempt To Solve Geetest CAPTCHA"
 description: "Attempt To Solve Geetest CAPTCHA"
 featuredImage: attempt-to-solve-geetest-captcha.png
+tags: 
+- "Cyber Security"
 ---
 ## What is Geetest CAPTCHA?
 In today's digital era, about 40% of network traffic is driven by bot. Usually, we only want human access our applications. For example, we want to prevent Ticket Bots for popular concerts. That's why CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) comes into play, we use it to distinguish Human from bots and thus blocks the bots

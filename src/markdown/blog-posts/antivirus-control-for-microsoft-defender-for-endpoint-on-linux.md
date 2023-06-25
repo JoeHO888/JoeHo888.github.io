@@ -4,6 +4,8 @@ slug: "/blog-posts/antivirus-definition-version-control-for-microsoft-defender-f
 title: "Antivirus Definition Version Control for Microsoft Defender for Endpoint on Linux"
 description: "About the commands and configurations to freeze, update and rollback antivirus definition version for Microsoft Defender for Endpoint on Linux (MDATP)"
 featuredImage: antivirus-definition-version-control-for-microsoft-defender-for-endpoint-on-linux.png
+tags: 
+- "Cyber Security"
 ---
 Microsoft Defender for Endpoint on Linux (MDATP) has a built-in antivirus engine which will protect you from file-based attacks. By default, this antivirus will update its definition automatically whenever there is a new version released. However, the latest version may remove some important files, thus there is a need to stop the automatic version update and rollback to specific version.
 
