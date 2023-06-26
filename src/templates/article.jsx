@@ -8,6 +8,7 @@ import Layout from "components/Layout";
 import Img from "gatsby-image"
 /* import Prism from "prismjs" */
 import 'styles/style.scss';
+import { Link } from "gatsby";
 
 const ArticleHeroContainer = styled("div")`
 /*     max-height: 500px; */
@@ -56,6 +57,10 @@ const ArticleMetas = styled("div")`
 
 const ArticleDate = styled("div")`
     margin: 0;
+`
+
+const ArticleTag = styled("div")`
+    font-size: 1rem;
 `
 
 const Article = ({ article }) => {
@@ -124,6 +129,14 @@ const Article = ({ article }) => {
                         <Img fluid={article.frontmatter.featuredImage.childImageSharp.fluid} alt={article.frontmatter.title} />
                     </ArticleHeroContainer>
                 )}
+
+                {article.frontmatter.tags && article.frontmatter.tags.map((tag, i) => (
+
+                    <ArticleTag key={i}>
+                        <Link to={"/tags/" + tag.toLowerCase().split(" ").join("-")}>🏷 {tag}</Link>
+                    </ArticleTag>
+                ))}
+
                 <ArticleBody>
                     <div
                         dangerouslySetInnerHTML={{ __html: article.html }}
@@ -153,6 +166,7 @@ export const query = graphql`
                 date(formatString: "MMMM DD, YYYY")
                 title
                 description
+                tags
                 featuredImage {
                     childImageSharp {
                         fluid(maxWidth: 800) {
