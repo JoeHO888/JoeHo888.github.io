@@ -89,7 +89,7 @@ export default ({ pageContext, data }) => {
     const tag = pageContext["tag"]
     const meta = {
         "title": "Blog Posts | Joe Ho Blog",
-        "description": "Blog Posts on various topics",
+        "description": `${tag} related Articles`,
         "author": "Joe Ho",
         "twitterAccount": "@JoeHo31326982"
     };

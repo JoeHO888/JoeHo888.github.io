@@ -252,10 +252,11 @@ export default ({ data }) => {
     const highlightProjects = data.projects.nodes
     const meta = {
         "title": "Home | Joe Ho Blog",
-        "description": "Joe Ho Blog On Data Analytics, Data Engineering",
+        "description": "Learn about the latest trends and best practices in cloud computing and cybersecurity. We provide expert insights and practical tips to help you improve your cloud infrastructure.",
         "author": "Joe Ho",
         "twitterAccount": "@JoeHo31326982"
     };
+
 
     return (
         <Layout>

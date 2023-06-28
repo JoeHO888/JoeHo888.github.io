@@ -100,7 +100,7 @@ export default ({ data }) => {
     const tagCountmap = createTagsCountMap(posts);
     const meta = {
         "title": "Blog Posts | Joe Ho Blog",
-        "description": "Blog Posts on various topics",
+        "description": "List of tags",
         "author": "Joe Ho",
         "twitterAccount": "@JoeHo31326982"
     };
