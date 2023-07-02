@@ -88,7 +88,7 @@ export default ({ pageContext, data }) => {
     const posts = data.blogPosts.nodes;
     const tag = pageContext["tag"]
     const meta = {
-        "title": "Blog Posts | Joe Ho Blog",
+        "title": `${tag} related Articles | Joe Ho Blog`,
         "description": `${tag} related Articles`,
         "author": "Joe Ho",
         "twitterAccount": "@JoeHo31326982"
