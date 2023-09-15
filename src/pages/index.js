@@ -145,14 +145,18 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
             <div>
                 <span class="hero-text">
                     Hello, I'm <span style={{ color: "#c1272e" }}>Joe </span>.
-                    Primarily, I work on <span style={{ color: "#5393fe" }}> Azure</span> and <span style={{ color: "#6cbb47" }}> Cyber Security</span>.
-                    Sometimes, I write Technology related <a target="_blank" href="/blog/" style={{ color: "#B57BFF", textDecoration: "none" }}>Blog Posts</a> or
-                    do interesting <a target="_blank" href="/projects/" style={{ color: "#4947bb", textDecoration: "none" }}>projects</a>.
+                    I share begineer friendly guides to help you become <span style={{ color: "#5393fe" }}> DevOps </span> Engineer.
                 </span>
             </div>
+            <div>
+                <span class="hero-description">
+                    I publish blog posts which cover tutorials, practical labs, mini projects and interview tips to help you prepare your DevOps career.
+                </span>
+            </div>
+
             <>
                 <Button>
-                    <a href="#about-me" style={{ color: "#ffffff", textDecoration: "none" }}>More</a>
+                    <a href="https://joe-ho-blog.ck.page/e75c089d8c" style={{ color: "#ffffff", textDecoration: "none" }} target="_blank" rel="noreferrer" >Subscribe</a>
                 </Button>
             </>
 
@@ -252,7 +256,7 @@ export default ({ data }) => {
     const highlightProjects = data.projects.nodes
     const meta = {
         "title": "Home | Joe Ho Blog",
-        "description": "Learn about the latest trends and best practices in cloud computing and cybersecurity. We provide expert insights and practical tips to help you improve your cloud infrastructure.",
+        "description": "Help you to become a DevOps Engineer with our well-organized guides, tutorials, mini projects and interview tips.",
         "author": "Joe Ho",
         "twitterAccount": "@JoeHo31326982"
     };

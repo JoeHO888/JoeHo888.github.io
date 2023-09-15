@@ -49,6 +49,20 @@ video {
     }
 }
 
+.hero-description {
+    font-size: 1.2em;
+    line-height: 1.45;
+    font-weight: 300;
+
+    @media(max-width:768px) {
+        font-size: 1.25em;
+    }
+
+    @media(max-width:600px) {
+        font-size: 1em;
+    }
+}
+
 .post-feed {
     display: grid;
     justify-content: space-between;
