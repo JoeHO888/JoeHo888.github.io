@@ -54,7 +54,11 @@ const Footer = () => (
             <Logo />
         </Link>
         <FooterAuthor href="https://www.marguerite.io/?utm_source=prist&utm_medium=footer&utm_campaign=prist_starter">
-            © 2021 — created by Joe
+            <Link
+                activeClassName="Link--is-active"
+                to="https://joe-ho-blog.ck.page/e75c089d8c" target="_blank">
+                Subscribe
+            </Link>
             <FooterSpooch className="FooterSpooch" src={spooch} />
         </FooterAuthor>
     </FooterContainer>

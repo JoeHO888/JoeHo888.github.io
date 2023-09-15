@@ -17,7 +17,7 @@ const HeaderContent = styled("div")`
 
 const HeaderLinks = styled("div")`
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     grid-gap: 2.5em;
     justify-content: flex-end;
     width: 100%;
@@ -94,6 +94,11 @@ const Header = () => (
                     to="/projects/">
                     Projects
                 </Link>
+                <Link
+                    activeClassName="Link--is-active"
+                    to="https://joe-ho-blog.ck.page/e75c089d8c" target="_blank">
+                    Subscribe
+                </Link>                
             </HeaderLinks>
         </HeaderContent>
     </HeaderContainer>
