@@ -623,14 +623,14 @@ const NewsletterBody = () => {
                         data-element="header"
                         style={{ color: "rgb(77, 77, 77)", fontSize: 27, fontWeight: 700 }}
                     >
-                        <h2>Join the Newsletter</h2>
+                        <h2>Join our Newsletter</h2>
                     </div>
                     <div
                         className="formkit-subheader"
                         data-element="subheader"
                         style={{ color: "rgb(104, 104, 104)", fontSize: 18 }}
                     >
-                        Subscribe to get our latest content by email.
+                        Subscribe to get beginner friendly DevOps Guide.
                     </div>
                     <ul
                         className="formkit-alert formkit-alert-error"
