@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 /* import Prism from "prismjs" */
 import 'styles/style.scss';
 import { Link } from "gatsby";
+import Newsletter from './Newsletter';
 
 const ArticleHeroContainer = styled("div")`
 /*     max-height: 500px; */
@@ -68,6 +69,7 @@ const Article = ({ article }) => {
             // call the highlightAll() function to style our code blocks
             Prism.highlightAll()
         }) */
+
     return (
         <>
             <Helmet
@@ -136,6 +138,7 @@ const Article = ({ article }) => {
                         <Link to={"/tags/" + tag.toLowerCase().split(" ").join("-")}>🏷 {tag}</Link>
                     </ArticleTag>
                 ))}
+                <Newsletter />
 
                 <ArticleBody>
                     <div
